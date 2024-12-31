@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class media {
+public class media_with_condition {
     public static void main(String[] args) {
         Scanner leituraTeclado = new Scanner(System.in);
 
@@ -13,10 +13,19 @@ public class media {
         float semestre3 = leituraTeclado.nextFloat();
 
         //calculado as variaveis
-        float resultado = (semestre1 + semestre2 + semestre3) / 3;
+        double resultado = (semestre1 + semestre2 + semestre3) / 3;
 
         //output
         System.out.println("A média: "+resultado);
+
+        //Condição
+        if(resultado >= 6){
+            System.out.println("Aprovado");
+        }else{
+            System.out.println("Reprovado");
+        }
+
+
 
 
     }
