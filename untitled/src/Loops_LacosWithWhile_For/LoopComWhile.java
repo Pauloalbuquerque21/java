@@ -1,4 +1,4 @@
-package loop;
+package Loops_LacosWithWhile_For;
 
 import java.util.Scanner;
 
