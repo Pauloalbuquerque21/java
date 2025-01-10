@@ -1,4 +1,4 @@
-package Loops_LacosWithWhile_For.exercicios;
+package section5_Loops_Laços_While_For.exercicios;
 import java.util.Scanner;
 
 public class exercicio9 {

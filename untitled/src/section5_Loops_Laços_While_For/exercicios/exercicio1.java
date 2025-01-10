@@ -1,5 +1,4 @@
-package Loops_LacosWithWhile_For.exercicios;
-import java.util.Scanner;
+package section5_Loops_Laços_While_For.exercicios;
 
 public class exercicio1 {
     public static void main(String[] args) {

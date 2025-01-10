@@ -1,4 +1,4 @@
-package Loops_LacosWithWhile_For;
+package section5_Loops_Laços_While_For;
 import java.util.Scanner;
 
 public class LoopComDoWhile {
