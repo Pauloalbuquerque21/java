@@ -2,6 +2,7 @@ package section6;
 import java.util.Scanner;
 
 public class LoopComDoWhile_switc_35 {
+    
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int resultado = 0;
