@@ -13,6 +13,8 @@ public class MainCarros {
         punto.transmissao = "Automatica";
         punto.combustivel = 20;
         punto.modelo = "punto";
+        punto.capacidadeTanque = 100;
+        punto.kmPorLitros = 10;
 
 
         Carros civic = new Carros();
@@ -22,18 +24,23 @@ public class MainCarros {
         civic.transmissao = "Manual";
         civic.combustivel = 0;
         civic.modelo = "civic";
+        civic.capacidadeTanque = 70;
+        civic.kmPorLitros = 12;
 
 
         System.out.println("Dados do punto:");
         System.out.println("O Carro: "+punto.modelo+" tem "+punto.cavalos+" cavalos.");
 
         //Método abastecimento, para encher o tanque.
-        civic.abastecer(30);
+        civic.abastecer(100);
 
         System.out.println("O Carro: "+civic.modelo+" tem de combustível "+civic.combustivel);
         System.out.println("O Carro: "+punto.modelo+" tem de combustível "+punto.combustivel);
 
         //Método para mostrar a autonomia
-        System.out.println("O Carro: "+punto.modelo+" tem de autonomia "+punto.autonomiaCombustível());
+        System.out.println("O Carro: "+punto.modelo+" tem de autonomia "+punto.autonomiaCombustivel());
+        System.out.println("O Carro:"+civic.modelo+" tem de autonomia "+civic.autonomiaCombustivel());
+
+        //
     }
 }
