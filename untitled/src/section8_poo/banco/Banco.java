@@ -19,7 +19,7 @@ public class Banco {
         }
     }
 
-    void transferir(Conta origem, Conta destino, double valor){
+    void transferir(Cliente nome1, Conta origem, Cliente nome2, Conta destino, double valor){
         double saldoAtualOrigem = origem.saldo;
         double novoSaldoOrigem = saldoAtualOrigem - valor;
         if(novoSaldoOrigem < 0){
@@ -28,6 +28,7 @@ public class Banco {
             origem.saldo = novoSaldoOrigem;
             double novoSaldoDestino = destino.saldo + valor;
             destino.saldo = novoSaldoDestino;
+            System.out.println("A conta "+nome1.nome+" tranferido "+valor+" para conta "+nome2.nome);
         }
 
     }
