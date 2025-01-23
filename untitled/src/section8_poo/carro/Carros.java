@@ -1,4 +1,4 @@
-package section8_poo;
+package section8_poo.carro;
 //Class: Carros, Atributos:cavalos,cor,transmissão e montadora
 public class Carros {
     int cavalos;
