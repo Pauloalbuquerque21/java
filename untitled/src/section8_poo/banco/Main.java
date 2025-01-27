@@ -5,10 +5,10 @@ public class Main {
 
         //Instanciando a variavel fulano, criar um objeto de uma class em java
         //você está criando uma instância da class Cliente e armazenando-a na variavel fulano
-        Cliente fulano = new Cliente();
+        Cliente fulano = new Cliente("123.456.789.30","carlos");
         //Atribuindo o valor "carlos" no atribudo nome
-        fulano.nome = "carlos";
-        fulano.cpf = "123.456.789.30";
+        //fulano.nome = "carlos";
+        //fulano.cpf = "123.456.789.30";
 
         Conta contaFulano = new Conta();
         contaFulano.numero = 100;
@@ -16,10 +16,10 @@ public class Main {
 
         System.out.println("Saldo atual do "+fulano.nome);
         contaFulano.imprimirSaldo();
-
-        Cliente fulano2 = new Cliente();
-        fulano2.nome = "Paulo";
-        fulano2.cpf = "321.654.987.20";
+        // Quando a class tem um construtor, só colocamos o parametro
+        Cliente fulano2 = new Cliente("321.654.987.20","Paulo");
+        //fulano2.nome = "Paulo";
+        //fulano2.cpf = "321.654.987.20";
 
         Conta contaFulano2 = new Conta();
         contaFulano2.numero = 101;
