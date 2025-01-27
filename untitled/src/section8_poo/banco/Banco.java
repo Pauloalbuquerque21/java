@@ -29,6 +29,7 @@ public class Banco {
             double novoSaldoDestino = destino.saldo + valor;
             destino.saldo = novoSaldoDestino;
             System.out.println("A conta "+nome1.nome+" tranferido "+valor+" para conta "+nome2.nome);
+
         }
 
     }

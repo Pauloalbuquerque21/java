@@ -6,7 +6,7 @@ public class Main {
         //Instanciando a variavel fulano, criar um objeto de uma class em java
         //você está criando uma instância da class Cliente e armazenando-a na variavel fulano
         Cliente fulano = new Cliente();
-        //Atribunindo o valor "carlos" no atribudo nome
+        //Atribuindo o valor "carlos" no atribudo nome
         fulano.nome = "carlos";
         fulano.cpf = "123.456.789.30";
 
@@ -37,17 +37,9 @@ public class Main {
         sistemaBancario.sacar(contaFulano2,50);
         System.out.println("Saldo do "+fulano2.nome+" apos o saque: "+contaFulano2.saldo);
 
+        //Tranferência entre contas:
         sistemaBancario.transferir(fulano,contaFulano,fulano2,contaFulano2,100);
 
-
-
-
-
-
-
-
-
-
-
+        contaFulano.imprimirSaldo();
     }
 }
