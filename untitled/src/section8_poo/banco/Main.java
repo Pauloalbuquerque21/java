@@ -10,9 +10,7 @@ public class Main {
         //fulano.nome = "carlos";
         //fulano.cpf = "123.456.789.30";
 
-        Conta contaFulano = new Conta();
-        contaFulano.numero = 100;
-        contaFulano.saldo = 150.50;
+        Conta contaFulano = new Conta(fulano,100,150.50);
 
         System.out.println("Saldo atual do "+fulano.nome);
         contaFulano.imprimirSaldo();
