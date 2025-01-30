@@ -1,13 +1,13 @@
 package section8_poo.banco;
 
 public class Conta {
-    Cliente titular;
-    int numero;
-    double saldo;
+     public Cliente titular;
+     public int numero;
+     public double saldo;
 
-    Conta(){}
+    public Conta(){}
 
-    Conta (Cliente titular, int numero, double saldo){
+    public Conta (Cliente titular, int numero, double saldo){
         this.titular = titular;
         this.numero = numero;
         if(saldo >= 0){
@@ -15,7 +15,7 @@ public class Conta {
         }
     }
 
-    void imprimirSaldo(){
+    public void imprimirSaldo(){
         //Imprimir o saldo, dessa conta. Por isso que usei esse "this."
         System.out.println(this.saldo);
     }
