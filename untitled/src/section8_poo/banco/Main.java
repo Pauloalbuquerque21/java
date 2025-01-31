@@ -10,7 +10,7 @@ public class Main {
         //fulano.nome = "carlos";
         //fulano.cpf = "123.456.789.30";
 
-        Conta contaFulano = new Conta(fulano,100,150.50);
+        Conta contaFulano = new Conta(fulano,100,-15d);
 
         System.out.println("Saldo atual do "+fulano.nome);
         contaFulano.imprimirSaldo();
@@ -21,7 +21,7 @@ public class Main {
 
         Conta contaFulano2 = new Conta();
         contaFulano2.numero = 101;
-        contaFulano2.saldo = 200;
+        contaFulano2.saldo = 200d;
 
 
         System.out.println("Saldo atual do "+fulano2.nome);
@@ -36,7 +36,7 @@ public class Main {
         System.out.println("Saldo do "+fulano2.nome+" apos o saque: "+contaFulano2.saldo);
 
         //Tranferência entre contas:
-        sistemaBancario.transferir(fulano,contaFulano,fulano2,contaFulano2,100);
+        sistemaBancario.transferir(fulano,contaFulano,fulano2,contaFulano2,50);
 
         contaFulano.imprimirSaldo();
     }

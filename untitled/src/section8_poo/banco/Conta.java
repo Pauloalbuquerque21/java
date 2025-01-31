@@ -10,6 +10,7 @@ public class Conta {
     public Conta (Cliente titular, int numero, double saldo){
         this.titular = titular;
         this.numero = numero;
+        //this.saldo = saldo;
         if(saldo >= 0){
             this.saldo = saldo;
         }
