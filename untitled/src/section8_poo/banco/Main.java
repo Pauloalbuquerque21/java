@@ -10,7 +10,7 @@ public class Main {
         //fulano.nome = "carlos";
         //fulano.cpf = "123.456.789.30";
 
-        Conta contaFulano = new Conta(fulano,100,-15d);
+        Conta contaFulano = new Conta(fulano,100,100d);
 
         System.out.println("Saldo atual do "+fulano.nome);
         contaFulano.imprimirSaldo();
@@ -21,7 +21,7 @@ public class Main {
 
         Conta contaFulano2 = new Conta();
         contaFulano2.numero = 101;
-        contaFulano2.saldo = 200d;
+        contaFulano2.modificarSaldo(200d);
 
 
         System.out.println("Saldo atual do "+fulano2.nome);
@@ -30,10 +30,12 @@ public class Main {
         Banco sistemaBancario = new Banco();
         sistemaBancario.depositar(contaFulano,100);
 
-        System.out.println("Saldo do "+fulano.nome+" após o deposito é igual: "+contaFulano.saldo);
+        System.out.println("Saldo do "+fulano.nome+" após o deposito é igual:");
+        contaFulano.imprimirSaldo();
 
         sistemaBancario.sacar(contaFulano2,50);
-        System.out.println("Saldo do "+fulano2.nome+" apos o saque: "+contaFulano2.saldo);
+        System.out.println("Saldo do "+fulano2.nome+" apos o saque:");
+        contaFulano2.imprimirSaldo();
 
         //Tranferência entre contas:
         sistemaBancario.transferir(fulano,contaFulano,fulano2,contaFulano2,50);
