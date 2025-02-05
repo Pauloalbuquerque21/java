@@ -1,6 +1,7 @@
 package section8_poo.banco;
 
 public class Cliente {
+    //propriedades
     public String cpf;
     public String nome;
     //Isso é um construtur

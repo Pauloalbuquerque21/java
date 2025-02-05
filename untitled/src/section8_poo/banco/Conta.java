@@ -15,7 +15,7 @@ public class Conta {
             this.saldo = saldo;
         }
     }
-
+    //Método com o void, logo concluimos que não retorná nada.
     public void modificarSaldo(double valor){
         if(valor > 0){
             this.saldo = valor;
@@ -24,6 +24,8 @@ public class Conta {
         }
 
     }
+    //Esse é um método que não tem um void, pois ele retorna um valor. Por esse motivo temos que colocar o tipo, nesse caso
+    //usamos o double.
     public double obterSaldo(){
         return this.saldo;
     }
