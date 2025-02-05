@@ -1,8 +1,8 @@
 package section8_poo.banco;
 
 public class Conta {
-     public Cliente titular;
-     public int numero;
+     private Cliente titular;
+     private int numero;
      private double saldo;
 
     public Conta(){}
@@ -15,8 +15,25 @@ public class Conta {
             this.saldo = saldo;
         }
     }
+
+    public void setTitular(Cliente titular){
+        this.titular = titular;
+    }
+
+    public Cliente getTitular(){
+        return this.titular;
+    }
+
+    public void setNumero(int numero){
+        this.numero = numero;
+    }
+
+    public int getNumero(){
+        return this.numero;
+    }
+
     //Método com o void, logo concluimos que não retorná nada.
-    public void modificarSaldo(double valor){
+    public void setValor(double valor){
         if(valor > 0){
             this.saldo = valor;
         }else{
@@ -26,7 +43,7 @@ public class Conta {
     }
     //Esse é um método que não tem um void, pois ele retorna um valor. Por esse motivo temos que colocar o tipo, nesse caso
     //usamos o double.
-    public double obterSaldo(){
+    public double getValor(){
         return this.saldo;
     }
 

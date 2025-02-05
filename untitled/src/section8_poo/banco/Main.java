@@ -20,8 +20,8 @@ public class Main {
         //fulano2.cpf = "321.654.987.20";
 
         Conta contaFulano2 = new Conta();
-        contaFulano2.numero = 101;
-        contaFulano2.modificarSaldo(200d);
+        contaFulano2.setNumero(101);
+        contaFulano2.setValor(200d);
 
 
         System.out.println("Saldo atual do "+fulano2.nome);
@@ -36,6 +36,9 @@ public class Main {
         sistemaBancario.sacar(contaFulano2,50);
         System.out.println("Saldo do "+fulano2.nome+" apos o saque:");
         contaFulano2.imprimirSaldo();
+
+
+        System.out.println("Numero do usuário "+fulano.nome+" tem o valor: "+contaFulano.getNumero());
 
         //Tranferência entre contas:
         sistemaBancario.transferir(fulano,contaFulano,fulano2,contaFulano2,50);
