@@ -10,6 +10,10 @@ public class Main {
         //fulano.nome = "carlos";
         //fulano.cpf = "123.456.789.30";
 
+        Cliente.setQuantClient(2);
+
+        System.out.println("Segue a quantidade de clientes: "+Cliente.getQuantClient());
+
         Conta contaFulano = new Conta(fulano,100,100d);
 
         System.out.println("Saldo atual do "+fulano.nome);

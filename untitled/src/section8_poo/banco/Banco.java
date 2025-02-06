@@ -5,7 +5,6 @@ public class Banco {
         double saldoAtual = conta.getValor();
         double novoSaldo = saldoAtual + valor;
         conta.setValor(novoSaldo);
-
     }
 
     public void sacar(Conta conta, double valor){
