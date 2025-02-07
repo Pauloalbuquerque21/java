@@ -10,6 +10,7 @@ public class Main {
         //fulano.nome = "carlos";
         //fulano.cpf = "123.456.789.30";
 
+        //como é um método de class, não podemos usar o objeto instãnciado para chamá-lo, mas sim, a própria classe.
         Cliente.setQuantClient(2);
 
         System.out.println("Segue a quantidade de clientes: "+Cliente.getQuantClient());

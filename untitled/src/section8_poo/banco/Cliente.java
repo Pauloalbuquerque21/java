@@ -4,6 +4,8 @@ public class Cliente {
     //propriedades
     public String cpf;
     public String nome;
+
+    //Propriedade da class, precisa da class para chamá-lo
     private static int quantidadeCliente;
     //Isso é um construtur
     public Cliente(String cpf,String nome) {
