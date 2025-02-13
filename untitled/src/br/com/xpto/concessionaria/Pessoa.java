@@ -1,4 +1,4 @@
-package section8_poo.br.com.xpto.concessionaria;
+package br.com.xpto.concessionaria;
 
 public class Pessoa {
     private String rg;
