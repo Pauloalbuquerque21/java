@@ -6,5 +6,7 @@ public class main {
 
     panda.setNome("Panda");
 
+    System.out.println(panda.getNome());
+
 
 }

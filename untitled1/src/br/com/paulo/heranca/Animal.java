@@ -19,5 +19,6 @@ public class Animal {
     public void setIdade(int idade){
 
         this.idade = idade;
+
     }
 }
