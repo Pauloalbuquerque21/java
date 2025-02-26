@@ -18,5 +18,6 @@ public class Panda extends Animal{
 
     public void setCorSecundaria(String corSecundaria){
         this.corSecundaria = corSecundaria;
+
     }
 }

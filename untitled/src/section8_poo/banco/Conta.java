@@ -5,8 +5,11 @@ public class Conta {
      private int numero;
      private double saldo;
 
+     // Esse construtor está vazio, para existir a possibilidade de atribuir valores nas propriedades(colocar parametros), sem está instânciando o objeto
     public Conta(){}
 
+    // Segue o construtor, lembre que ele tem que ter o mesmo nome da class.
+    // Com ele, você quando instancia um objeto você já pode definir as proriedades(colocar os parametros)
     public Conta (Cliente titular, int numero, double saldo){
         this.titular = titular;
         this.numero = numero;
