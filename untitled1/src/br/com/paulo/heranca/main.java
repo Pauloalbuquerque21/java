@@ -3,9 +3,7 @@ package br.com.paulo.heranca;
 
 public class main {
     public static void main(String[] args) {
-        Panda panda = new Panda();
-
-        Cachorro cachorro = new Cachorro;
+        Panda panda = new Panda("Carlinho",10,"branco","preto");
 
         panda.setNome("Panda");
 
