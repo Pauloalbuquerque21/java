@@ -11,7 +11,6 @@ public class Bloco {
     //Construtor
     public Bloco(int tamanho){
         this.horarios = new int[tamanho];
-
     }
 
     //vou fazr um array com as opções de bairros
@@ -20,13 +19,13 @@ public class Bloco {
         this.nome = nome;
     }
 
-    public void setHorarios(int valor, int posicao){
+    /*public void setHorarios(int valor, int posicao){
         this.horarios[posicao] = valor;
     }
 
     public getHorários(){
         return horarios;
     }
-
+    */
 
 }

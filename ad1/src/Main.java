@@ -1,6 +1,5 @@
 import java.util.Scanner;
 
-
 public class Main {
     public static void main(String[] args) {
         Scanner leituraTeclado = new Scanner(System.in);
@@ -18,9 +17,14 @@ public class Main {
         if(opcaoTipoUsuario == 0){
             System.out.print("Organização dos blocos, selecionado");
             System.out.print("Favor escolha o horário que será o bloco:");
-            int horario_evento =leituraTeclado.nextInt();
+
+            //pega o horário
+            int horario_evento = leituraTeclado.nextInt();
+            // posição que será salvo
             int posicao = horario_evento - 1;
-            setHorarios(horario_evento,posicao);
+            System.out.println(horario_evento);
+            System.out.println(posicao);
+            //setHorarios(horario_evento,posicao);
 
         }
         }
