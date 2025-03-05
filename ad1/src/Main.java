@@ -4,8 +4,13 @@ public class Main {
     public static void main(String[] args) {
         Scanner leituraTeclado = new Scanner(System.in);
 
-        //Definir o tamanho do vator horários
-        Bloco vetorhorario = new Bloco(13);
+        //Definir o tamanho do vetor horários, que sera das 8 até as 22
+        //Instanciando os vetorres
+        Bloco vetorHorariosBlocos = new Bloco(14);
+
+        //Instanciando os blocos
+        BlocoInfantil infantil = new BlocoInfantil(14);
+
 
         // Analisar o tipo de usuário que vai acessar o sistema.
         System.out.println("Carnaval Rio de janeiro\nEscolha uma da opções[0 ou 1]:\n[0] Organização dos blocos\n[1] Informações e recomendações para curti o carnaval.");
@@ -13,19 +18,70 @@ public class Main {
         int opcaoTipoUsuario = leituraTeclado.nextInt();
         System.out.println(opcaoTipoUsuario);
 
+        //declarar a variavel
+        int opcao_sobre_organizar_bloco;
+        int opcao_sobre_tema;
+
         //Condição de cada usuário
-        if(opcaoTipoUsuario == 0){
-            System.out.print("Organização dos blocos, selecionado");
-            System.out.print("Favor escolha o horário que será o bloco:");
+        if (opcaoTipoUsuario == 0) {
+            do{
+                System.out.print("Organização dos blocos, selecionado");
+                System.out.print("Favor escolha o horário que será o bloco:");
+                //pega o horário
+                int horario_evento = leituraTeclado.nextInt();
+                // posição que será salvo, -8 pois a posição que será salvo no vetor tem que começa no 0.
+                int posicao = horario_evento - 8;
 
-            //pega o horário
-            int horario_evento = leituraTeclado.nextInt();
-            // posição que será salvo
-            int posicao = horario_evento - 1;
-            System.out.println(horario_evento);
-            System.out.println(posicao);
-            //setHorarios(horario_evento,posicao);
+                //Condição do horário, se já ou não cadastrado
+                if(vetorHorariosBlocos.getHorarios(posicao) == 0){
+                    vetorHorariosBlocos.setHorarios(horario_evento, posicao);
+                    System.out.println("Horário cadastrado");
+                    vetorHorariosBlocos.Horarios();
+
+                    // Definir o tema que seria o bloco;
+                    System.out.println("Favor selecionar o tipo de bloco, para cadastrar:\nInfantil[0]\nTradicional[1]\nTemático[2]");
+                    opcao_sobre_tema = leituraTeclado.nextInt();
+
+                    if(opcao_sobre_tema == 0){
+                        System.out.println("Tema Intantil:");
+                        System.out.println("Favor digite a faixa etária");
+
+                        System.out.print("Inicio da idade:");
+                        int inicio_etaria_idade = leituraTeclado.nextInt();
+
+                        System.out.print("Até que idade:");
+                        int fim_etaria_idade = leituraTeclado.nextInt();
+
+                        System.out.println("Digite o nome do bloco:");
+                        int
+
+                        infantil.setFaixaEtaria(inicio_etaria_idade,fim_etaria_idade);
+                    }else if(opcao_sobre_tema == 1){
+                        System.out.println("Tema Tradicional escolhido:");
+                    }else if(opcao_sobre_tema == 2){
+                        System.out.println("Tema Temático:");
+                    }
+                }else{
+                    System.out.println("Horário Indisponível");
+                    System.out.println("Segue os horários já marcados:");
+                    vetorHorariosBlocos.Horarios();
+                }
+
+                System.out.println(horario_evento);
+                System.out.println(posicao);
+
+
+                System.out.println("valor que está no vetor da posição" +posicao);
+                System.out.println(vetorHorariosBlocos.getHorarios(posicao));
+
+                System.out.println("[0]Adicionar novo bloco\n[1]Sair");
+                opcao_sobre_organizar_bloco = leituraTeclado.nextInt();
+            }while(opcao_sobre_organizar_bloco != 1);
 
         }
+
+            leituraTeclado.close();
+
         }
+
     }
