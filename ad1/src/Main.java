@@ -16,6 +16,8 @@ public class Main {
         System.out.println("Carnaval Rio de janeiro\nEscolha uma da opções[0 ou 1]:\n[0] Organização dos blocos\n[1] Informações e recomendações para curti o carnaval.");
         System.out.println("Qual opção:");
         int opcaoTipoUsuario = leituraTeclado.nextInt();
+
+        //##Teste para apagar
         System.out.println(opcaoTipoUsuario);
 
         //declarar a variavel
@@ -46,17 +48,24 @@ public class Main {
                         System.out.println("Tema Intantil:");
                         System.out.println("Favor digite a faixa etária");
 
+                        //colhendo informações
                         System.out.print("Inicio da idade:");
                         int inicio_etaria_idade = leituraTeclado.nextInt();
-
                         System.out.print("Até que idade:");
                         int fim_etaria_idade = leituraTeclado.nextInt();
 
-                        System.out.println("Digite o nome do bloco:");
-                        int
+                        //Input de uma String você usa o nextLine
+                        System.out.print("Digite o nome do bloco:");
+                        String nome_bloco = leituraTeclado.nextLine();
 
+                        //Salvando a faixa etária
                         infantil.setFaixaEtaria(inicio_etaria_idade,fim_etaria_idade);
+
+                        //Inserindo informações no vetor bloco
+                        vetorHorariosBlocos.setBlocos(nome_bloco,posicao);
+
                     }else if(opcao_sobre_tema == 1){
+
                         System.out.println("Tema Tradicional escolhido:");
                     }else if(opcao_sobre_tema == 2){
                         System.out.println("Tema Temático:");
@@ -70,9 +79,12 @@ public class Main {
                 System.out.println(horario_evento);
                 System.out.println(posicao);
 
-
-                System.out.println("valor que está no vetor da posição" +posicao);
+                //##teste para apagar###
+                System.out.println("valor que está no vetor da posição " +posicao);
                 System.out.println(vetorHorariosBlocos.getHorarios(posicao));
+
+                System.out.println("valor que está no vetor da posição " +posicao);
+                System.out.println(vetorHorariosBlocos.getBlocos(posicao));
 
                 System.out.println("[0]Adicionar novo bloco\n[1]Sair");
                 opcao_sobre_organizar_bloco = leituraTeclado.nextInt();

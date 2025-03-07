@@ -34,7 +34,14 @@ public class Bloco {
         return this.horarios[posicao];
     }
 
-    public
+    public void setBlocos(String valor, int posicao){
+        this.blocos[posicao] = valor;
+    }
+
+    public String getBlocos(int posicao){
+        return this.blocos[posicao];
+    }
+
 
     public void Horarios(){
         System.out.print("Horário Armazenados:");
