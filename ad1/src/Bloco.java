@@ -8,14 +8,19 @@ public class Bloco {
     private int numeroFolioesAnterior;
     private int[] horarios;
     private String[] blocos;
+    private String[] lugares;
 
     //Construtor para dos vetores
     public Bloco(int tamanho){
         //Essa parte int[tamanho] é por que as informações que serão recebidas, serão ints
         this.horarios = new int[tamanho];
-        //Essa parte String[tamanho] é por que as informações que serão recebidas, serão strings
+        //Essa parte String[tamanho] é porque as informações que serão recebidas, serão strings
         this.blocos = new String[tamanho];
+        //Vetor lugares
+        this.lugares = new String[tamanho];
     }
+
+
 
 
 

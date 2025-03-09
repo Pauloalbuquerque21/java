@@ -10,6 +10,8 @@ public class Main {
 
         //Instanciando os blocos
         BlocoInfantil infantil = new BlocoInfantil(14);
+        BlocoTematico tematico = new BlocoTematico(14);
+        BlocoTradicional tradicional = new BlocoTradicional(14);
 
 
         // Analisar o tipo de usuário que vai acessar o sistema.
@@ -67,8 +69,16 @@ public class Main {
                     }else if(opcao_sobre_tema == 1){
 
                         System.out.println("Tema Tradicional escolhido:");
+
+
                     }else if(opcao_sobre_tema == 2){
                         System.out.println("Tema Temático:");
+                        System.out.print("Qual é o tema do desfile:");
+                        //Informa o tema do desfile
+                        String tema_desfile = leituraTeclado.nextLine();
+
+                        tematico.setDesfile(tema_desfile);
+
                     }
                 }else{
                     System.out.println("Horário Indisponível");
