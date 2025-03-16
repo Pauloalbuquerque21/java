@@ -4,4 +4,7 @@ public class BlocoTradicional extends Bloco{
     public BlocoTradicional(int tamanho){
         super(tamanho);
     }
-}
+
+    public void setAnos(int anos){
+        this.anosExistente = anos;
+};

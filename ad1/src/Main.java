@@ -30,7 +30,7 @@ public class Main {
         if (opcaoTipoUsuario == 0) {
             do{
                 System.out.print("Organização dos blocos, selecionado");
-                System.out.print("Favor escolha o horário que será o bloco:");
+                System.out.print("[Os horários diponíveis são de 8 até as 22]\nFavor escolha o horário que será o bloco:");
                 //pega o horário
                 int horario_evento = leituraTeclado.nextInt();
                 // posição que será salvo, -8 pois a posição que será salvo no vetor tem que começa no 0.
@@ -58,26 +58,51 @@ public class Main {
 
                         //Input de uma String você usa o nextLine
                         System.out.print("Digite o nome do bloco:");
-                        String nome_bloco = leituraTeclado.nextLine();
+
+                        //Fiz isso para evitar de pular o próximo input
+                        leituraTeclado.nextLine();
+
+                        String infantil_nome_bloco = leituraTeclado.nextLine();
 
                         //Salvando a faixa etária
                         infantil.setFaixaEtaria(inicio_etaria_idade,fim_etaria_idade);
 
                         //Inserindo informações no vetor bloco
-                        vetorHorariosBlocos.setBlocos(nome_bloco,posicao);
+                        vetorHorariosBlocos.setBlocos(infantil_nome_bloco,posicao);
 
                     }else if(opcao_sobre_tema == 1){
 
                         System.out.println("Tema Tradicional escolhido:");
 
+                        System.out.println("Favor digite os anos que o bloco Existe:");
+
+                        //Anos que o bloco existe
+                        int anos_tradicional = leituraTeclado.nextInt();
+                        tradicional.setAnos(anos_tradicional);
+
+                        //
+                        System.out.print("Digite o nome do bloco:");
+                        String nome_bloco = leituraTeclado.nextLine();
+                        vetorHorariosBlocos.setBlocos(nome_bloco,posicao);
+
 
                     }else if(opcao_sobre_tema == 2){
                         System.out.println("Tema Temático:");
                         System.out.print("Qual é o tema do desfile:");
+
                         //Informa o tema do desfile
                         String tema_desfile = leituraTeclado.nextLine();
-
+                        //Atribuiando aos atrivutos da class Bloco Tematico
                         tematico.setDesfile(tema_desfile);
+
+                        //Fiz isso para evitar de pular o próximo input
+                        leituraTeclado.nextLine();
+
+                        //Cadastrar o nome do bloco
+                        System.out.print("Digite o nome do bloco:");
+                        String nome_bloco = leituraTeclado.nextLine();
+                        vetorHorariosBlocos.setBlocos(nome_bloco,posicao);
+
 
                     }
                 }else{
