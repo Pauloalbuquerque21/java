@@ -6,5 +6,5 @@ public class BlocoTradicional extends Bloco{
     }
 
     public void setAnos(int anos){
-        this.anosExistente = anos;
-};
+        this.anosExistente = anos;}
+}
