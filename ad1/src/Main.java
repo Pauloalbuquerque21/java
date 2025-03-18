@@ -23,9 +23,6 @@ public class Main {
             System.out.println("Qual opção:");
             opcaoTipoUsuario = leituraTeclado.nextInt();
 
-            //##Teste para apagar
-            System.out.println(opcaoTipoUsuario);
-
             //declarar a variavel
             int opcao_sobre_organizar_bloco;
             int opcao_sobre_tema;
@@ -34,8 +31,8 @@ public class Main {
             //Condição de cada usuário
             if (opcaoTipoUsuario == 0) {
                 do {
-                    System.out.print("Organização dos blocos, selecionado\n");
-                    System.out.print("[Os horários diponíveis são de 8 até as 22]\nFavor escolha o horário que será o bloco:");
+                    System.out.print("Organização dos blocos no Centro do Rio.\n");
+                    System.out.print("[Os horários diponíveis são de 8 até as 21]\nFavor escolha o horário que será o bloco:");
                     //pega o horário
                     int horario_evento = leituraTeclado.nextInt();
                     // posição que será salvo, -8 pois a posição que será salvo no vetor tem que começa no 0.
@@ -85,7 +82,10 @@ public class Main {
                             int anos_tradicional = leituraTeclado.nextInt();
                             tradicional.setAnos(anos_tradicional);
 
-                            //
+                            //Fiz isso para evitar de pular o próximo input
+                            leituraTeclado.nextLine();
+
+                            //Digite o nome do bloco
                             System.out.print("Digite o nome do bloco:");
                             String nome_bloco = leituraTeclado.nextLine();
                             vetorHorariosBlocos.setBlocos(nome_bloco, posicao);
@@ -116,16 +116,6 @@ public class Main {
                         vetorHorariosBlocos.Horarios();
                     }
 
-                    System.out.println(horario_evento);
-                    System.out.println(posicao);
-
-                    //##teste para apagar###
-                    System.out.println("valor que está no vetor da posição " + posicao);
-                    System.out.println(vetorHorariosBlocos.getHorarios(posicao));
-
-                    System.out.println("valor que está no vetor da posição " + posicao);
-                    System.out.println(vetorHorariosBlocos.getBlocos(posicao));
-
                     System.out.println("[0]Adicionar novo bloco\n[1]Deixar de Organizar bloco");
                     opcao_sobre_organizar_bloco = leituraTeclado.nextInt();
                 } while (opcao_sobre_organizar_bloco != 1);
@@ -146,11 +136,17 @@ public class Main {
                 //impedi que pule
                 leituraTeclado.nextLine();
 
-                System.out.println("Favor difite o seu estilo musical:");
+                System.out.println("Favor digite o seu estilo musical:");
                 String estilo_foliao = leituraTeclado.nextLine();
                 foliao.setEstilo(estilo_foliao);
 
-                System.out.println("Segue os blocos e horários cadastrados ");
+                vetorHorariosBlocos.cadastrados_blocos();
+
+                System.out.println("Favor digite o horário que você vai curti o bloco\n[8 até 22, favor digitar em o ':00', apenas o número]:");
+                int horario_escolhido = leituraTeclado.nextInt();
+
+                // Posta o horário e bloco que o usuário seleciono.
+                System.out.println("Bloco selecionado é "+vetorHorariosBlocos.getBlocos(horario_escolhido-8)+" do horário de "+vetorHorariosBlocos.getHorarios(horario_escolhido-8)+" horas");
 
             }
 

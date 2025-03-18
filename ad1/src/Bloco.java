@@ -47,6 +47,13 @@ public class Bloco {
         return this.blocos[posicao];
     }
 
+    public void cadastrados_blocos() {
+        System.out.println("Blocos cadastrados nos horários:");
+        for (int i = 0; i < blocos.length; i++) {
+            int horario = 8 + i; // Define o horário começando do 8 até 22
+            System.out.println(horario + ":00 - " + blocos[i]);
+        }
+    }
 
 
     public void Horarios(){
