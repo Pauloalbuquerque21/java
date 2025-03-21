@@ -4,6 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner leituraTeclado = new Scanner(System.in);
 
+
         //Definir o tamanho do vetor horários, que sera das 8 até as 22
         //Instanciando os vetorres
         Bloco vetorHorariosBlocos = new Bloco(14);
@@ -136,10 +137,12 @@ public class Main {
                 //impedi que pule
                 leituraTeclado.nextLine();
 
+                //Parte que escolhe o estilo musical
                 System.out.println("Favor digite o seu estilo musical:");
                 String estilo_foliao = leituraTeclado.nextLine();
                 foliao.setEstilo(estilo_foliao);
 
+                //Mosta os blocos e horários cadastrados
                 vetorHorariosBlocos.cadastrados_blocos();
 
                 System.out.println("Favor digite o horário que você vai curti o bloco\n[8 até 22, favor digitar em o ':00', apenas o número]:");

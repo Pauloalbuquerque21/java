@@ -24,7 +24,7 @@ public class Bloco {
 
 
 
-    //vou fazer um array com as opções de bairros.
+
 
     public void setNome(String nome){
         this.nome = nome;
@@ -47,6 +47,7 @@ public class Bloco {
         return this.blocos[posicao];
     }
 
+    //metodo que retorna o print dos blocos, como não te report usamos o void
     public void cadastrados_blocos() {
         System.out.println("Blocos cadastrados nos horários:");
         for (int i = 0; i < blocos.length; i++) {
