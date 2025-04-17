@@ -1,4 +1,4 @@
-/*
+
 package section8_poo;
 import section8_poo.banco.Banco;
 import section8_poo.banco.Cliente;

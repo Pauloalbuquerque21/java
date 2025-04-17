@@ -14,7 +14,7 @@ public class LoopComDoWhile_switc_35 {
             System.out.println("Sair - 0");
             System.out.println("Escolha umas das opções:");
 
-            resultado = scanner.nextInt();
+            resultado = scanner.nextLine();
             int valorTotal = 0;
 
             //No switch, você pode usar opções e usa o break para parar nessa opção

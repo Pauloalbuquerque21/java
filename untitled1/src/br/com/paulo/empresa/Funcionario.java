@@ -1,18 +1,19 @@
 package br.com.paulo.empresa;
 
-public class Funcionario {
+public abstract class Funcionario {
 
     private String nome;
     private String cpf;
     private double salario;
 
     //método que sera override.
-    public double calcularBonificacao(){
+    public abstract double calcularBonificacao(){
         return (salario / 10) + 50;
     }
 
     public void imprimirRemuneracao(){
         double remuneracao = salario + this.calcularBonificacao();
+        double remuneracao = salario + bonificacao;16
         System.out.println("Remuneração do funcionario "+nome+" é "+remuneracao);
     }
 
