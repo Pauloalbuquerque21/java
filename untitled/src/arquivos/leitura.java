@@ -3,13 +3,18 @@ import java.io.*;
 
 public class leitura {
     public static void main(String[] args){
-        BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\paulo\\OneDrive\\Documentos\\testando.txt"));
+        try {
+            // BufferedReader é um class para leitura de arquivo
+            BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\paulo\\OneDrive\\Documentos\\testando.txt"));
 
-        String texto = br.readline();
+            String texto = br.readLine();
 
-        System.out.println(texto);
+            System.out.println(texto);
 
-        br.close();
+            br.close();
+        } catch (IOException e){
+            System.out.println("Erro ao ler o arquivo: " + e.getMessage());
+        }
 
 
 
