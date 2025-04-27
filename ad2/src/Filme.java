@@ -1,13 +1,26 @@
+import java.util.ArrayList;
+
 public class Filme {
-    private String titulo;
-    private String genero;
-    private int duracao;
+    private ArrayList<String> titulo;
+    private ArrayList<String> genero;
+    private ArrayList<Integer> duracao;
 
-    public Filme(String titulo, String genero, int duracao){
-        this.titulo = titulo;
-        this.genero = genero;
-        this.duracao = duracao;
+    public Filme(){
+        this.titulo = new ArrayList();
+        this.genero = new ArrayList();
+        this.duracao = new ArrayList();
+    }
 
+    public void adicionarDuracao(int tempo){
+        duracao.add(tempo);
+    }
+
+    public void adicionarGenero(int genero){
+        this.genero.add(genero);
+    }
+
+    public void adicionarTitulo(int nome){
+        titulo.add(nome);
     }
 
 
