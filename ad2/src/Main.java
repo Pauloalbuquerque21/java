@@ -8,13 +8,15 @@ public class Main {
         System.out.print("Quantas plataformas serão cadastradas?");
         int quantidade_catalogo = leituraTeclado.nextInt();
 
+        //resolver o problema, pois quando tem um input de o int depois um input de string, o de string pula
+        leituraTeclado.nextLine();
+
         //Array com os arquvis
         String[] filmes = new String[quantidade_catalogo];
 
-        //Entrada do nome do arquivo
+        //Entrada do nome do arquivo no vetor filmes[]
         for(int i = 0;i< filmes.length; i++) {
             System.out.print("Qual o nome do arquivo:");
-            leituraTeclado.nextLine();
             String nomeArquivo = leituraTeclado.nextLine();
             filmes[i] = nomeArquivo;
         }
@@ -26,10 +28,12 @@ public class Main {
                 plataformaTodo = new BufferedReader(arquivoPlataforma);
                 String linhaPlataforma = plataformaTodo.readLine();
                 System.out.println(linhaPlataforma);
-                while(linhaPlataforma != null){
+                while(linhaPlataforma != null) {
                     linhaPlataforma = plataformaTodo.readLine();
                     System.out.println(linhaPlataforma);
                     }
+                plataformaTodo.close();
+
             }
 
         } catch(Exception erro){
@@ -37,6 +41,11 @@ public class Main {
             System.out.print("Deu ruim");
             System.out.println(erro.getMessage());
         }
+
+
+        leituraTeclado.close();
+
+
 
 
 
