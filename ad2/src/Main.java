@@ -28,8 +28,11 @@ public class Main {
                 plataformaTodo = new BufferedReader(arquivoPlataforma);
                 String linhaPlataforma = plataformaTodo.readLine();
                 System.out.println(linhaPlataforma);
+                int processo = 0;
                 while(linhaPlataforma != null) {
+                    if (processo == 0){
                     linhaPlataforma = plataformaTodo.readLine();
+                    Filme linhaPlataforma = new Filme(linhaPlataforma);
                     System.out.println(linhaPlataforma);
                     }
                 plataformaTodo.close();
