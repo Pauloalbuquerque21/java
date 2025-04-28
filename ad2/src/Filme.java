@@ -12,14 +12,16 @@ public class Filme {
     }
 
     public void adicionarDuracao(int tempo){
+
         duracao.add(tempo);
     }
 
-    public void adicionarGenero(int genero){
-        this.genero.add(genero);
+    public void adicionarGenero(String tipo){
+        genero.add(tipo);
     }
 
-    public void adicionarTitulo(int nome){
+    public void adicionarTitulo(String nome){
+
         titulo.add(nome);
     }
 

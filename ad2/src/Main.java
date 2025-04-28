@@ -23,30 +23,37 @@ public class Main {
         BufferedReader plataformaTodo = null;
 
         try {
-            for(int i = 0;i<filmes.length;i++){
+            for (int i = 0; i < filmes.length; i++) {
                 FileReader arquivoPlataforma = new FileReader(filmes[i]);
                 plataformaTodo = new BufferedReader(arquivoPlataforma);
                 String linhaPlataforma = plataformaTodo.readLine();
                 System.out.println(linhaPlataforma);
                 int processo = 0;
-                while(linhaPlataforma != null) {
-                    if (processo == 0){
-                    linhaPlataforma = plataformaTodo.readLine();
-                    Filme linhaPlataforma = new Filme(linhaPlataforma);
-                    System.out.println(linhaPlataforma);
+                while (linhaPlataforma != null) {
+                    if (processo == 0) {
+                        linhaPlataforma = plataformaTodo.readLine();
+                        Filme linhaLeitura = new Filme(linhaPlataforma);
+
+                        System.out.print(linhaLeitura);
+                        processo = processo + 1;
+                    } else {
+                        linhaPlataforma = plataformaTodo.readLine();
+                        System.out.print(linhaPlataforma);
                     }
+
+                }
+                //fechamento do arquivo
                 plataformaTodo.close();
 
             }
-
-        } catch(Exception erro){
-            //Vai tratar o erro.
-            System.out.print("Deu ruim");
-            System.out.println(erro.getMessage());
+            } catch(Exception erro){
+                //Vai tratar o erro.
+                System.out.print("Deu ruim");
+                System.out.println(erro.getMessage());
+            }
         }
 
 
-        leituraTeclado.close();
 
 
 
@@ -54,5 +61,4 @@ public class Main {
 
 
 
-    }
 }
