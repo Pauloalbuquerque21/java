@@ -12,7 +12,6 @@ public class Filme {
     }
 
     public void adicionarDuracao(int tempo){
-
         duracao.add(tempo);
     }
 
