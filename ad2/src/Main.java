@@ -38,6 +38,7 @@ public class Main {
 
                 String linhaPlataforma = plataformaTodo.readLine();
                 System.out.println(linhaPlataforma);
+                Filme objStrime = new Filme(linhaPlataforma);
                 System.out.println("--");
                 //int processo = 0;
                 //while (linhaPlataforma != null) {
