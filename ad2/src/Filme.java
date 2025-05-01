@@ -9,6 +9,7 @@ public class Filme {
         this.titulo = new ArrayList();
         this.genero = new ArrayList();
         this.duracao = new ArrayList();
+
     }
 
     public void adicionarDuracao(int tempo){

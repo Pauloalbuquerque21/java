@@ -18,11 +18,16 @@ public class Main {
         //Array com os arquvis
         String[] streamer = new String[quantidade_catalogo];
 
+        //Class Filme instãnciar a variavel filmes
+
+        Filme filmes = new Filme();
+
         //Entrada do nome do arquivo no vetor streamer[]
         for(int i = 0;i< streamer.length; i++) {
             System.out.print("Qual o nome do arquivo:");
             String nomeArquivo = leituraTeclado.nextLine();
             streamer[i] = nomeArquivo;
+            //Filme objStrime = new Filme(nomeArquivo);
         }
 
 
@@ -38,13 +43,14 @@ public class Main {
 
                 String linhaPlataforma = plataformaTodo.readLine();
                 System.out.println(linhaPlataforma);
-                Filme objStrime = new Filme(linhaPlataforma);
+                //Filme objStrime = new Filme(linhaPlataforma);
                 System.out.println("--");
                 //int processo = 0;
                 //while (linhaPlataforma != null) {
                     //if (processo == 0) {
                         //linhaPlataforma = plataformaTodo.readLine();
-                        //Filme linhaLeitura = new Filme(linhaPlataforma);
+                        Catalogo catalogo = new Catalogo();
+                        catalogo.adicionarCatalogo(linhaPlataforma);
 
                         //System.out.print(linhaLeitura);
                         //processo = processo + 1;
@@ -52,11 +58,30 @@ public class Main {
                     //    linhaPlataforma = plataformaTodo.readLine();
                         //System.out.print(linhaPlataforma);
                     //}
-                while (linhaPlataforma != null){
-                    linhaPlataforma = plataformaTodo.readLine();
-                    System.out.println(linhaPlataforma);
 
-                }
+                do{
+                    linhaPlataforma = plataformaTodo.readLine();
+
+                    //criando um arrary, para dividir as informações em cada linha
+                    String[] dadosLinha = new String[3];
+
+                    //Condição para quando for null, não ler
+                    if(linhaPlataforma != null){
+                        System.out.println(linhaPlataforma);
+                        dadosLinha = linhaPlataforma.split(";");
+
+                        //Usar os métodos das class
+                        System.out.println(Integer.parseInt(dadosLinha[2].trim()));
+                        filmes.adicionarDuracao(Integer.parseInt(dadosLinha[2].trim()));
+                        System.out.println(dadosLinha[1]);
+                        filmes.adicionarGenero(dadosLinha[1]);
+                        System.out.println(dadosLinha[0]);
+                        filmes.adicionarTitulo(dadosLinha[0]);
+
+
+
+                    }
+                }while (linhaPlataforma != null);
                 //fechamento do arquivo
                 plataformaTodo.close();
 
