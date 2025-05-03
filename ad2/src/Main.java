@@ -37,7 +37,7 @@ public class Main {
             for (int i = 0; i < streamer.length; i++) {
                 //Abre o arquivo e prepara para leitura
                 FileReader arquivoPlataforma = new FileReader(streamer[i]);
-                //
+
                 plataformaTodo = new BufferedReader(arquivoPlataforma);
 
 
@@ -52,12 +52,8 @@ public class Main {
                         Catalogo catalogo = new Catalogo();
                         catalogo.adicionarCatalogo(linhaPlataforma);
 
-                        //System.out.print(linhaLeitura);
-                        //processo = processo + 1;
-                    //} else {
-                    //    linhaPlataforma = plataformaTodo.readLine();
-                        //System.out.print(linhaPlataforma);
-                    //}
+
+                    int vezesFilmes = 0;
 
                 do{
                     linhaPlataforma = plataformaTodo.readLine();
@@ -67,6 +63,10 @@ public class Main {
 
                     //Condição para quando for null, não ler
                     if(linhaPlataforma != null){
+                        //Somar o número de vezes de filmes
+                        vezesFilmes+=1;
+
+
                         System.out.println(linhaPlataforma);
                         dadosLinha = linhaPlataforma.split(";");
 
@@ -82,6 +82,15 @@ public class Main {
 
                     }
                 }while (linhaPlataforma != null);
+
+                //Adicionar a quantidade de vezes do filme
+                filmes.adicionarnumeroFilmes(vezesFilmes);
+
+                //*****printar o vetor duração
+                filmes.imprimirVetorDuracao();
+
+
+
                 //fechamento do arquivo
                 plataformaTodo.close();
 
