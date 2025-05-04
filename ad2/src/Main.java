@@ -105,16 +105,16 @@ public class Main {
                 System.out.print("Deu ruim");
                 System.out.println(erro.getMessage());
             }
-        leituraTeclado.close();
+
         //inicar a proxima parte que é ver
 
         String opcaoDeGenero = "";
-        while(opcaoDeGenero != "0"){
+        while(!opcaoDeGenero.equals("0")){
             System.out.print("Escolha um gênero, ou digite “0” para encerrar:");
             opcaoDeGenero = leituraTeclado.nextLine();
 
         }
-
+        leituraTeclado.close();
 
         }
 
