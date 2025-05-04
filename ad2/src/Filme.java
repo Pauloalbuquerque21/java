@@ -19,7 +19,7 @@ public class Filme {
     }
 
     public void imprimirVetornumeroFilmes(){
-        System.out.print();
+        System.out.print(numeroFilmes);
     }
 
     public void adicionarDuracao(int tempo){

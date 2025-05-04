@@ -87,7 +87,12 @@ public class Main {
                 filmes.adicionarnumeroFilmes(vezesFilmes);
 
                 //*****printar o vetor duração
+                System.out.print("Numero de durações:");
                 filmes.imprimirVetorDuracao();
+
+                //****imprimir o número de filmes
+                System.out.print("Números de filmes:");
+                filmes.imprimirVetornumeroFilmes();
 
 
 
@@ -101,6 +106,16 @@ public class Main {
                 System.out.println(erro.getMessage());
             }
         leituraTeclado.close();
+        //inicar a proxima parte que é ver
+
+        String opcaoDeGenero = "";
+        while(opcaoDeGenero != "0"){
+            System.out.print("Escolha um gênero, ou digite “0” para encerrar:");
+            opcaoDeGenero = leituraTeclado.nextLine();
+
+        }
+
+
         }
 
 
