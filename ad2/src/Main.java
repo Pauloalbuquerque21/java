@@ -7,6 +7,8 @@ public class Main {
         //Instanciei a variavel LeituraTeclado, para poder inputs
         Scanner leituraTeclado = new Scanner(System.in);
 
+        //objeto catalogo sendo instânciando com a class Catalogo
+        Catalogo catalogo = new Catalogo();
 
         //Entrada para quantas plataformas
         System.out.print("Quantas plataformas serão cadastradas?");
@@ -23,11 +25,10 @@ public class Main {
         Filme filmes = new Filme();
 
         //Entrada do nome do arquivo no vetor streamer[]
-        for(int i = 0;i< streamer.length; i++) {
+        for(int i = 0;i < streamer.length; i++) {
             System.out.print("Qual o nome do arquivo:");
             String nomeArquivo = leituraTeclado.nextLine();
             streamer[i] = nomeArquivo;
-            //Filme objStrime = new Filme(nomeArquivo);
         }
 
 
@@ -49,7 +50,6 @@ public class Main {
                 //while (linhaPlataforma != null) {
                     //if (processo == 0) {
                         //linhaPlataforma = plataformaTodo.readLine();
-                        Catalogo catalogo = new Catalogo();
                         catalogo.adicionarCatalogo(linhaPlataforma);
 
 
@@ -84,7 +84,7 @@ public class Main {
                 }while (linhaPlataforma != null);
 
                 //Adicionar a quantidade de vezes do filme
-                filmes.adicionarnumeroFilmes(vezesFilmes);
+                catalogo.adicionarnumeroFilmes(vezesFilmes);
 
                 //*****printar o vetor duração
                 System.out.print("Numero de durações:");
@@ -92,7 +92,7 @@ public class Main {
 
                 //****imprimir o número de filmes
                 System.out.print("Números de filmes:");
-                filmes.imprimirVetornumeroFilmes();
+                catalogo.imprimirVetornumeroFilmes();
 
 
 
@@ -112,8 +112,12 @@ public class Main {
         while(!opcaoDeGenero.equals("0")){
             System.out.print("Escolha um gênero, ou digite “0” para encerrar:");
             opcaoDeGenero = leituraTeclado.nextLine();
+            catalogo.mostrarFilmesGenero(opcaoDeGenero);
+
 
         }
+        //Mostrar filmes:
+
         leituraTeclado.close();
 
         }
