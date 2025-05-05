@@ -1,8 +1,8 @@
 import java.util.ArrayList;
 
 public class Filme {
-    private ArrayList<String> titulo;
-    private ArrayList<String> genero;
+    public ArrayList<String> titulo;
+    public ArrayList<String> genero;
     private ArrayList<Integer> duracao;
 
     public Filme(){

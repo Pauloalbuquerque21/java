@@ -6,8 +6,8 @@ public class Catalogo extends  Filme{
     private ArrayList<Integer> numeroFilmes;
 
     public Catalogo(){
-        this.strimes = new ArrayList();
-        this.numeroFilmes = new ArrayList();
+        this.strimes = new ArrayList<String>();
+        this.numeroFilmes = new ArrayList<Integer>();
     }
 
     public void adicionarCatalogo(String nome){
@@ -25,14 +25,20 @@ public class Catalogo extends  Filme{
         numeroFilmes.add(vezes);
     }
 
-    public void mostrarFilmesGenero(String genero){
+    public void mostrarFilmesGenero(String generoFilme){
         int quantidadeStrimes = strimes.size();
-        for(int selecionarStrime = 0;selecionarStrime < quantidadeStrimes;selecionarStrime++){
+        for(int selecionarStrime = 0;selecionarStrime < quantidadeStrimes;selecionarStrime++) {
             System.out.print(strimes.get(selecionarStrime));
+            if(selecionarStrime == 0){
+                for(int qualFilme = 0; qualFilme < numeroFilmes.get(selecionarStrime); qualFilme++){
+                    if(generoFilme.equals(genero.get(qualFilme))){
+                        System.out.print("Apareceu");
+                    }
 
-            for(int qualFilme =0;qualFilme < numeroFilmes.get(selecionarStrime);qualFilme++){
+                }
 
-            }
+
+        }
         }
     }
 

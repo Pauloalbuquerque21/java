@@ -44,8 +44,7 @@ public class Main {
 
                 String linhaPlataforma = plataformaTodo.readLine();
                 System.out.println(linhaPlataforma);
-                //Filme objStrime = new Filme(linhaPlataforma);
-                System.out.println("--");
+                //Filme objStrime = new Filme(linhaPlataforma);;
                 //int processo = 0;
                 //while (linhaPlataforma != null) {
                     //if (processo == 0) {
@@ -71,11 +70,8 @@ public class Main {
                         dadosLinha = linhaPlataforma.split(";");
 
                         //Usar os métodos das class
-                        System.out.println(Integer.parseInt(dadosLinha[2].trim()));
                         filmes.adicionarDuracao(Integer.parseInt(dadosLinha[2].trim()));
-                        System.out.println(dadosLinha[1]);
                         filmes.adicionarGenero(dadosLinha[1]);
-                        System.out.println(dadosLinha[0]);
                         filmes.adicionarTitulo(dadosLinha[0]);
 
 
@@ -86,13 +82,6 @@ public class Main {
                 //Adicionar a quantidade de vezes do filme
                 catalogo.adicionarnumeroFilmes(vezesFilmes);
 
-                //*****printar o vetor duração
-                System.out.print("Numero de durações:");
-                filmes.imprimirVetorDuracao();
-
-                //****imprimir o número de filmes
-                System.out.print("Números de filmes:");
-                catalogo.imprimirVetornumeroFilmes();
 
 
 
