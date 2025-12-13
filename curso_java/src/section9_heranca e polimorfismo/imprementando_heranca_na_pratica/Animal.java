@@ -31,4 +31,9 @@ public class Animal {
     public void dormir(){
         System.out.println("ZZZZZZ");
     }
+
+    public void imprimirDados(){
+        System.out.println("Nome: " + this.nome);
+        System.out.println("Idade: " + this.idade);
+    }
 }

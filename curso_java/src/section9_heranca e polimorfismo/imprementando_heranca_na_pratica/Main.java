@@ -6,6 +6,11 @@ public class Main {
         panda.setNome("Panda");
         panda.setIdade(50);
         System.out.println("Nome" + panda.getNome());
+
+        Hipopotamo hipopotamo = new Hipopotamo();
+        hipopotamo.setNome("Hipo");
+        hipopotamo.setIdade(50);
+        hipopotamo.imprimirDados();
     }
     
 }
