@@ -3,8 +3,7 @@ import java.util.Scanner;
 public class exercicio5 {
     public static void main(String[] args) {
         Scanner leituraTeclado = new Scanner(System.in);
-
-
+        
         //Variavel
         System.out.println("Digite o valor em Celsius:");
         double celsius = leituraTeclado.nextDouble();
