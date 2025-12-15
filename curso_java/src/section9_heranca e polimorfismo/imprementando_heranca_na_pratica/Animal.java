@@ -1,4 +1,4 @@
-package section9_heranca e polimorfismo.imprementando_heranca_na_pratica;
+package imcrementando_heranca_na_pratica;
 
 public class Animal {
     private String nome;
@@ -32,7 +32,7 @@ public class Animal {
         System.out.println("ZZZZZZ");
     }
 
-    public void imprimirDados(){
+    protected void imprimirDados(){
         System.out.println("Nome: " + this.nome);
         System.out.println("Idade: " + this.idade);
     }
