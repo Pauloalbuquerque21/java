@@ -1,4 +1,12 @@
-package imcrementando_heranca_na_pratica;
+package imprementando_heranca_na_pratica;
+
+
+/**
+ *Public -> Visivel em qualquer lugar
+ *Private -> Visivel openas na propria classe
+ *package ou default -> Somente dentro do pacote
+ *protected -> Dentros das classes filhas ou pacotes
+ */
 
 public class Animal {
     private String nome;
