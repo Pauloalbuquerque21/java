@@ -1,4 +1,4 @@
-package imprementando_heranca_na_pratica;
+package section9_heranca;
 
 
 /**
