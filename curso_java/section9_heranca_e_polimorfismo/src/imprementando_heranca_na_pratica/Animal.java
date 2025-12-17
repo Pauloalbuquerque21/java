@@ -12,6 +12,17 @@ public class Animal {
     private String nome;
     private int idade;
 
+    /*
+    É um construtor dessa class. Sabemos disso, pois o nome desse
+    Método é o da class, logo é um construtor
+    E como é um construtor você definir alguns paramentos, nesse caso
+    se for instânciado teremos que definir o nome
+     */
+
+    public Animal(String nome){
+        this.nome = nome;
+    }
+
     public String getNome(){
         return nome;
     }
