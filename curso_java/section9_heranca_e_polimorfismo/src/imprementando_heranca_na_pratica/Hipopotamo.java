@@ -1,7 +1,12 @@
-package section9_heranca e polimorfismo;
+package imprementando_heranca_na_pratica;
 
-public class Hipopotamo {
+public class Hipopotamo extends Animal{
     private int forcaMordida;
+
+    public Hipopotamo(int idade, int forcaMordida){
+        super("Hipopotamo", idade);
+        this.forcaMordida = forcaMordida;
+    }
 
     public void ficarNaAgua(){
         System.out.println("Estou na água...");

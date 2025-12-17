@@ -1,11 +1,15 @@
-package section9_heranca e polimorfismo;
+package imprementando_heranca_na_pratica;
 
 public class Panda extends Animal{
     private String cor;
     private String corSecundaria;
 
+    public Panda(){
+        super("Urso");
+    }
+
     public void subirArvore(){
-        System.out.println("Subindo...")
+        System.out.println("Subindo...");
     }
     
     public String getCor(){

@@ -1,14 +1,14 @@
-package section9_heranca e polimorfismo.imprementando_heranca_na_pratica;
+package imprementando_heranca_na_pratica;
 
 public class Main {
     public static void main(String[] args){
         Panda panda = new Panda();
         panda.setNome("Panda");
         panda.setIdade(50);
-        System.out.println("Nome" + panda.getNome());
+        System.out.println("Nome: " + panda.getNome());
+
 
         Hipopotamo hipopotamo = new Hipopotamo();
-        hipopotamo.setNome("Hipo");
         hipopotamo.setIdade(50);
         hipopotamo.imprimirDados();
     }

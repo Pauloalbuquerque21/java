@@ -19,7 +19,7 @@ public class Animal {
     se for instânciado teremos que definir o nome
      */
 
-    public Animal(String nome){
+    public Animal(String nome, int idade){
         this.nome = nome;
     }
 
