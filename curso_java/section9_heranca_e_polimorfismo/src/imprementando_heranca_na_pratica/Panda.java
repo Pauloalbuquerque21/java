@@ -4,8 +4,8 @@ public class Panda extends Animal{
     private String cor;
     private String corSecundaria;
 
-    public Panda(){
-        super("Urso");
+    public Panda(int idade){
+        super("Urso",idade);
     }
 
     public void subirArvore(){

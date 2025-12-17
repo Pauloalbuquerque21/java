@@ -9,7 +9,7 @@ public class Funcionario{
         return ( salario / 10 ) + 50;
     }
 
-    public void imprimirRemunaracao(){
+    public void imprimirRemuneracao(){
         double bonificacao = this.bonificacao();
         double remuneracao = salario + this.bonificacao();
         System.out.println("Remuneração do funcionario "+ nome + "é: "+remuneracao);
