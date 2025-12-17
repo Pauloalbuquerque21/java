@@ -8,8 +8,8 @@ public class Cachorro extends Animal{
     que ter um construtor e usar a palavra reservada super()
 
      */
-    public Cachorro(String nome){
-        super("Mel");
+    public Cachorro (int idade){
+        super("Mel",idade);
     }
 
     public void latir(){
