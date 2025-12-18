@@ -10,4 +10,9 @@ public class Tecnico extends Funcionario {
     public void setEspecialidade(String especialidade){
         this.especialidade = especialidade;
     }
+
+    @Override
+    public double bonificacaoAnual(){
+        return super.getSalario() * 2;
+    }
 }
