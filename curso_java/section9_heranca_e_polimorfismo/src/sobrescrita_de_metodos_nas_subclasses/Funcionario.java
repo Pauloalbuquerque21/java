@@ -1,9 +1,11 @@
 package sobrescrita_de_metodos_nas_subclasses;
 
-public class Funcionario{
+public abstract class Funcionario{
     private String nome;
     private String cpf;
     private double salario;
+
+    public abstract double bonificacaoAnual();
 
     public double bonificacao(){
         return ( salario / 10 ) + 50;
