@@ -12,4 +12,9 @@ public class Professor extends Pessoa{
     public double getSalario(){
         return salario;
     }
+
+    @Override
+    public String getDescricao(){
+        return super.getDescricao()+" - Professor - Salário: "+ salario;
+    }
 }

@@ -12,4 +12,9 @@ public class Funcionario extends Pessoa {
     public String getSetor(){
         return setor;
     }
+
+    @Override
+    public String getDescricao(){
+        return super.getDescricao()+ "-Funcionario - Setor: " + setor;
+    }
 }

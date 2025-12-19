@@ -11,4 +11,9 @@ public class Aluno extends Pessoa {
     public String getCurso(){
         return curso;
     }
+
+    @Override
+    public String getDescricao(){
+        return super.getDescricao()+" - Aluno - Curso: "+ curso;
+    }
 }

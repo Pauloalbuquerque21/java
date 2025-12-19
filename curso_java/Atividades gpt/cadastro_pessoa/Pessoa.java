@@ -13,5 +13,9 @@ public class Pessoa {
         return nome;
     }
 
+    public String getDescricao(){
+        return nome + "(" + idade + " anos)";
+    }
+
 
 }
