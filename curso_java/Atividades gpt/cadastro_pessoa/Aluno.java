@@ -7,4 +7,8 @@ public class Aluno extends Pessoa {
         super(nome,idade);
         this.curso = curso;
     }
+
+    public String getCurso(){
+        return curso;
+    }
 }

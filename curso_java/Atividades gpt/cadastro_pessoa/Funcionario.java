@@ -8,4 +8,8 @@ public class Funcionario extends Pessoa {
         super(nome,idade);
         this.setor = setor;
     }
+
+    public String getSetor(){
+        return setor;
+    }
 }
