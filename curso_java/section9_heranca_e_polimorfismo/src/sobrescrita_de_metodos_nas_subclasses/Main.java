@@ -14,6 +14,10 @@ public class Main {
         gerente.setCpf("98765432100");
         gerente.imprimirRemuneracao();
 
+        ConexaoBancaria conexaoBancaria = new ConexaoBancaria();
+        GerenciaRH gerenciaRH = new GerenciaRH(conexaoBancaria);
+        gerenciaRH.bonificacaoAnual(gerente);
+        gerenciaRH.bonificacaoAnual(tecnico);
 
     }
 }
