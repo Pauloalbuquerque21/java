@@ -1,7 +1,7 @@
 package loja_produtos;
 
 
-public class Produto{
+public abstract class Produto{
     public String nome;
     public double preco;
 
@@ -10,8 +10,7 @@ public class Produto{
         this.preco = preco;
     }
 
-    public double calcularDesconto(){
-    }
+    public abstract double calcularDesconto();
 
 
 }
