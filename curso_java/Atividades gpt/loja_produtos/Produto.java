@@ -1,7 +1,7 @@
 package loja_produtos;
 
 
-public abstract class Produto{
+public  class Produto{
     public String nome;
     public double preco;
 
@@ -10,7 +10,17 @@ public abstract class Produto{
         this.preco = preco;
     }
 
-    public abstract double calcularDesconto();
+    public double calcularDesconto(){
+        return preco;
+    }
+
+    public String getNome(){
+        return nome;
+    }
+
+    public double getPreco(){
+        return preco;
+    }
 
 
 }
