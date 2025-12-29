@@ -73,7 +73,7 @@ public class TelaCadastro extends JFrame{
         //Cria um botão "Salvar" para exibir na tela
         botaoSalvar = new JButton("Salvar");
         //Definir a posição e o tamanho do  Botão
-        botaoSalvar.setBounds(20,1600,200,20);
+        botaoSalvar.setBounds(20,160,200,20);
         //Adicione o botão "Salvar"denro da janela
         getContentPane().add(botaoSalvar);
     }
