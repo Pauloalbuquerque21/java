@@ -1,5 +1,7 @@
 package clientes.apresentacao;
 
+import clientes.dominio.enums.TipoSexo;
+
 import javax.swing.*;
 
 public class TelaCadastro extends JFrame{
@@ -10,7 +12,7 @@ public class TelaCadastro extends JFrame{
 
     private JTextField campoNome;
     private JTextField campoCpf;
-    private JComboBox<String> campoSexo;
+    private JComboBox<TipoSexo> campoSexo;
 
     public TelaCadastro(){
         construirTela();
@@ -55,7 +57,7 @@ public class TelaCadastro extends JFrame{
         getContentPane().add(labelSexo);
 
         //Array
-        String[] tipoSexo = {"M","F","0"};
+        TipoSexo[] tipoSexo = {null, TipoSexo.M, TipoSexo.F, TipoSexo.O};
         //Cria um campo de seleção (combo box) e preencha
         campoSexo = new JComboBox<>(tipoSexo);
         campoSexo.setBounds(20,120,200,20);

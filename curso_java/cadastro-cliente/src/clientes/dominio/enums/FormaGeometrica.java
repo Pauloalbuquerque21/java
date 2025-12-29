@@ -16,9 +16,17 @@ public enum FormaGeometrica {
     private final String descricao;
 
 
-    public FormaGeometrica(int lados, String descricao){
+    FormaGeometrica(int lados, String descricao){
         this.lados = lados;
         this.descricao = descricao;
+    }
+
+    public int getLados(){
+        return lados;
+    }
+
+    public String getDescricao(){
+        return descricao;
     }
 
 }
