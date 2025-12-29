@@ -14,6 +14,8 @@ public class TelaCadastro extends JFrame{
     private JTextField campoCpf;
     private JComboBox<TipoSexo> campoSexo;
 
+    private JButton botaoSalvar;
+
     public TelaCadastro(){
         construirTela();
     }
@@ -68,7 +70,12 @@ public class TelaCadastro extends JFrame{
     }
 
     private void adicionarBotoes(){
-
+        //Cria um botão "Salvar" para exibir na tela
+        botaoSalvar = new JButton("Salvar");
+        //Definir a posição e o tamanho do  Botão
+        botaoSalvar.setBounds(20,1600,200,20);
+        //Adicione o botão "Salvar"denro da janela
+        getContentPane().add(botaoSalvar);
     }
 
     private void adicionarCamponentesFotos(){
