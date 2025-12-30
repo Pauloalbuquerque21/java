@@ -78,13 +78,16 @@ public class TelaCadastro extends JFrame{
         //Definir a posição e o tamanho do  Botão
         botaoSalvar.setBounds(20,160,200,20);
 
+        ActionListener acaoBotaoSalvar = this.botaoSalvarActionListener();
+        botaoSalvar.addActionListener(acaoBotaoSalvar);
+
         //
         //Class anônima
         botaoSalvar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e){
 
-        }
+            }
         });
 
         //Adicione o botão "Salvar"denro da janela
@@ -102,9 +105,9 @@ public class TelaCadastro extends JFrame{
                 Cliente cliente = new Cliente();
                 cliente.setNome(campoNome.getText());
                 cliente.setCpf(campoCpf.getText());
-                cliente.setSexo((TipoSexo) campoSexo.getSelectedItem());
+                cliente.setSexo( (TipoSexo) campoSexo.getSelectedItem());
 
-                JOptionPane.showMessageDialog(null,cliente);
+                JOptionPane.showMessageDialog(null, cliente);
             }
         };
     }
