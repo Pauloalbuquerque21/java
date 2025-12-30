@@ -1,6 +1,9 @@
 package clientes.apresentacao;
 
+import clientes.dominio.Cliente;
 import clientes.dominio.enums.TipoSexo;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 import javax.swing.*;
 
@@ -74,12 +77,36 @@ public class TelaCadastro extends JFrame{
         botaoSalvar = new JButton("Salvar");
         //Definir a posição e o tamanho do  Botão
         botaoSalvar.setBounds(20,160,200,20);
+
+        //
+        //Class anônima
+        botaoSalvar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e){
+
+        }
+        });
+
         //Adicione o botão "Salvar"denro da janela
         getContentPane().add(botaoSalvar);
     }
 
     private void adicionarCamponentesFotos(){
 
+    }
+
+    private ActionListener botaoSalvarActionListener(){
+        return new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Cliente cliente = new Cliente();
+                cliente.setNome(campoNome.getText());
+                cliente.setCpf(campoCpf.getText());
+                cliente.setSexo((TipoSexo) campoSexo.getSelectedItem());
+
+                JOptionPane.showMessageDialog(null,cliente);
+            }
+        };
     }
 }
 
