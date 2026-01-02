@@ -6,6 +6,9 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 import javax.swing.*;
+import clientes.logicanegocio.Cadastro;
+import clientes.logicanegocio.LogicaCadastroClienteFake;
+
 
 public class TelaCadastro extends JFrame{
 
@@ -106,6 +109,9 @@ public class TelaCadastro extends JFrame{
                 cliente.setNome(campoNome.getText());
                 cliente.setCpf(campoCpf.getText());
                 cliente.setSexo( (TipoSexo) campoSexo.getSelectedItem());
+
+                Cadastro<Cliente> logicaCadastro = new LogicaCadastroClienteFake();
+                logicaCadastro.salvar(cliente);
 
                 JOptionPane.showMessageDialog(null, cliente);
             }
