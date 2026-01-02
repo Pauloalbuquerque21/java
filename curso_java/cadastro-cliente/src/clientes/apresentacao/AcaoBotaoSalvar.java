@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 public class AcaoBotaoSalvar implements ActionListener {
 
     @Override
-    public void actionPerformed(ActionEvent e){
+    public void actionPerformed(ActionEvent e) {
         //implementado na propria class
     }
 }
