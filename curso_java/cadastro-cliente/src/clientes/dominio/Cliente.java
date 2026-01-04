@@ -56,6 +56,10 @@ public class Cliente {
         this.foto = foto;
     }
 
+    public String toString() {
+        return "Cliente - Código:" + codigo + " - Nome: " + nome + " - CPF: " + cpf + " - Sexo: " + sexo;
+    }
+
 
 
 
