@@ -4,6 +4,11 @@ public class Funcionario {
     public String nome;
     public double salarioBase;
 
+    public Funcionario(String nome, double salarioBase) {
+        this.nome = nome;
+        this.salarioBase = salarioBase;
+    }
+
     public double calcularPagamento(){
         return salarioBase;
     }
@@ -20,9 +25,10 @@ public class Funcionario {
         this.salarioBase = salarioBase;
     }
 
-    public String getNome(){
+    public double getSalarioBase(){
         return salarioBase;
     }
+
 
 
 }
