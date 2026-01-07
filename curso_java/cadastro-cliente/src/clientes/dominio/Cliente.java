@@ -16,7 +16,7 @@ public class Cliente {
         this.codigo = UUID.randomUUID();
     }
 
-    public UUID getCódigo(){
+    public UUID getCodigo(){
         return codigo;
     }
 

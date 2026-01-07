@@ -20,16 +20,34 @@ public class LogicaCadastroMemoria implements Cadastro<Cliente>{
 
     @Override
     public Cliente buscar(UUID codigo) {
-        return null;
+        Cliente clienteEncontrado = null;
+
+        for (Cliente c : this.lista){
+            if(c.getCodigo().equals(codigo)){
+                clienteEncontrado = c;
+                break;
+            }
+        }
     }
 
     @Override
     public void deletar(UUID codigo) {
-
+        Cliente clienteEncontrado = this.buscar(codigo);
+        if(clienteEncontrado != null) {
+            this.lista.remove(clienteEncontrado);
+        }
     }
 
     @Override
-    public void atualizar(Cliente objetoAtualizar) {
+    public void atualizar(Cliente cliente) {
+        //faz sentido ao trabalhar com banco de dados
+    }
 
+    @Override
+    public void imprimirRegistros(){
+        System.out.println("Imprimindo" + this.lista.size() + "clientes:");
+        for (Cliente cliente: this.lista){
+            System.out.println(cliente);
+        }
     }
 }

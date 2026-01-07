@@ -1,7 +1,6 @@
 package clientes.logicanegocio;
 
 import clientes.dominio.Cliente;
-
 import javax.swing.*;
 import java.util.UUID;
 
@@ -26,5 +25,9 @@ public class LogicaCadastroClienteFake implements Cadastro<Cliente> {
     @Override
     public void atualizar(Cliente objetoAtualizar) {
 
+    }
+
+    @Override
+    public void imprimirRegistros(){
     }
 }

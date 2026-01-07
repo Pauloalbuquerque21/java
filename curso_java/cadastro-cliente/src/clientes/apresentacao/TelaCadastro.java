@@ -8,7 +8,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.*;
 import clientes.logicanegocio.Cadastro;
 import clientes.logicanegocio.LogicaCadastroClienteFake;
-
+import clientes.logicanegocio.LogicaCadastroMemoria;
 
 public class TelaCadastro extends JFrame{
 
@@ -22,8 +22,11 @@ public class TelaCadastro extends JFrame{
 
     private JButton botaoSalvar;
 
+    private Cadastro<Cliente> logicaCadastro;
+
     public TelaCadastro(){
         construirTela();
+        this.logicaCadastro = new LogicaCadastroMemoria();
     }
 
     private void construirTela(){
@@ -110,10 +113,9 @@ public class TelaCadastro extends JFrame{
                 cliente.setCpf(campoCpf.getText());
                 cliente.setSexo( (TipoSexo) campoSexo.getSelectedItem());
 
-                Cadastro<Cliente> logicaCadastro = new LogicaCadastroClienteFake();
                 logicaCadastro.salvar(cliente);
 
-                JOptionPane.showMessageDialog(null, cliente);
+                logicaCadastro.imprimirRegistros();
             }
         };
     }
