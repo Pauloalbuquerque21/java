@@ -22,4 +22,26 @@ public class cadastroCliente {
 
     }
 
+    public boolean buscarPorCpf(String cpf) {
+        for (cliente c : clientes) {
+            if (c.getCpf().equals(cpf)) {
+                return true;
+            }
+
+        }
+        return false;
+    }
+
+    public boolean removerPorCpf(String cpf){
+        for (int c = 1; c < clientes.size();c++){
+            if(clientes.get(c).getCpf().equals(cpf)){
+                clientes.remove(c);
+                return true;
+            }
+
+        }
+        return false;
+    }
+
+
 }
