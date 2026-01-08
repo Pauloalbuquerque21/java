@@ -11,4 +11,15 @@ public class cadastroCliente {
         this.clientes = new ArrayList<>();
     }
 
+    public void adicionarCliente(cliente cliente){
+        clientes.add(cliente);
+    }
+
+    public void listarCliente(){
+        for (cliente c : clientes){
+            System.out.println(c);
+        }
+
+    }
+
 }
