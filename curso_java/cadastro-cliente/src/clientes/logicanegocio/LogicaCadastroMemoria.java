@@ -28,6 +28,7 @@ public class LogicaCadastroMemoria implements Cadastro<Cliente>{
                 break;
             }
         }
+        return clienteEncontrado;
     }
 
     @Override
