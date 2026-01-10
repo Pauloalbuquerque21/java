@@ -4,7 +4,7 @@ import clientes.dominio.enums.TipoSexo;
 
 import java.util.UUID;
 
-public class Cliente {
+public class Cliente implements Comparable<Cliente> {
 
     private UUID codigo;
     private String nome;
@@ -58,6 +58,26 @@ public class Cliente {
 
     public String toString() {
         return "Cliente - Código:" + codigo + " - Nome: " + nome + " - CPF: " + cpf + " - Sexo: " + sexo;
+    }
+    /*
+    *@param o the objecto to be compared.
+    *@return
+    *valor -> exemplo
+    * 0 -> São iguais -> 1 == 1
+    * 1 -> é maior -> 2 > 1
+    * -1 -> é menor -> 1 < 2
+    * Usado para inteiros.
+    *
+    */
+    @Override
+    public int compareTo(Cliente o){
+        /*
+        *É um critério por nome, logo nesse caso será diferente.
+        * Se for o mesmo nome, o resultado será 0
+        * Sé for diferente e a primeira letra do primeiro nome for "a" então é maior que a segunda.
+        * Sé for diferente e a primeira letra do segundo nome for "a" então é maior que a segunda.
+         */
+        return this.nome.compareTo(o.getNome());
     }
 
 
