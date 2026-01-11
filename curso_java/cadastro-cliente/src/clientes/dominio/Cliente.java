@@ -77,7 +77,11 @@ public class Cliente implements Comparable<Cliente> {
         * Sé for diferente e a primeira letra do primeiro nome for "a" então é maior que a segunda.
         * Sé for diferente e a primeira letra do segundo nome for "a" então é maior que a segunda.
          */
-        return this.nome.compareTo(o.getNome());
+        int fator = this.nome.compareTo(o.getNome());
+        if(fator == 0){
+            fator = this.sexo.equals(TipoSexo.F) ? -1 : 1 ;
+        }
+        return fator;
     }
 
 
