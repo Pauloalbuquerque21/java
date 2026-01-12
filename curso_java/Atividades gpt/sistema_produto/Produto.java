@@ -1,6 +1,6 @@
 package sistema_produto;
 
-public class Produto {
+public class Produto implements Comparable<Produto>{
     public int codigo;
     public String nome;
     public double preco;
@@ -28,7 +28,9 @@ public class Produto {
         return "Codigo: " + codigo + "\nNome: " + nome + "\n Preço:" + preco;
     }
 
-
+    public int compareTo(Produto outro){
+        return this.nome.compareTo(outro.nome);
+    }
 
 
 
