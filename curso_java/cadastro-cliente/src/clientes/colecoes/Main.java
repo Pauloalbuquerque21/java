@@ -8,10 +8,34 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.HashSet;
+import java.util.Map;
+import java.util.HashMap;
 
 public class Main {
     public static void main(String[] args){
+        Map<Integer, String> mapa = new HashMap<>();
+        mapa.put(1,"Fulano");
+        mapa.put(2,"Cicrano");
+        mapa.put(3,"Maria");
 
+        String nome = mapa.get(2);
+        System.out.println(nome);
+
+        //mapa.remove(1);
+
+        System.out.println(mapa.get(1));
+
+        boolean contemChave = mapa.containsKey(2);
+        System.out.println("Contem a chave 2: " + contemChave);
+
+        boolean contemValor = mapa.containsValue("Fulano");
+        System.out.println("Contem o valor Fulano? " + contemValor);
+
+
+
+    }
+
+    private static void repositorioComArrays(){
         Cliente cliente = new Cliente();
         cliente.setCpf("0123");
         cliente.setNome("Fulano");
@@ -22,6 +46,8 @@ public class Main {
         cliente2.setNome("Cicrano");
         cliente2.setSexo(TipoSexo.M);
 
+        //asList, trasforma em lista, ou seja, vai pegar o objeto cliente e
+        // cliente2 e colocarem eles em uma lista.
         List<Cliente> clientes = Arrays.asList(cliente, cliente2);
 
         //clientes.sort(Cliente::compareTo);
@@ -29,9 +55,10 @@ public class Main {
         for (Cliente c : clientes){
             System.out.println(c);
         }
-
-
     }
+
+
+
 
     private static void repositorioComSet(){
         //Não permiti adicionar o mesmo a mesma informação
