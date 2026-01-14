@@ -13,11 +13,16 @@ import java.util.HashMap;
 
 public class Main {
     public static void main(String[] args){
+
+        //iniciando uma coleção Map,a key é inteiro e o valor é string
         Map<Integer, String> mapa = new HashMap<>();
+
+        //Colocando cada valor e associando a key.
         mapa.put(1,"Fulano");
         mapa.put(2,"Cicrano");
         mapa.put(3,"Maria");
 
+        //pegando o valor que esteja associado a key 2.
         String nome = mapa.get(2);
         System.out.println(nome);
 
@@ -25,9 +30,12 @@ public class Main {
 
         System.out.println(mapa.get(1));
 
+        // verificar se a chave key vai está no Map
         boolean contemChave = mapa.containsKey(2);
+
         System.out.println("Contem a chave 2: " + contemChave);
 
+        //Verificar se contem o valor informado
         boolean contemValor = mapa.containsValue("Fulano");
         System.out.println("Contem o valor Fulano? " + contemValor);
 
