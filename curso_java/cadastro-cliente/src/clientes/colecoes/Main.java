@@ -14,6 +14,31 @@ import java.util.HashMap;
 public class Main {
     public static void main(String[] args){
 
+        OrganizacaoClientes cadastro = new OrganizacaoClientes();
+
+        Cliente cliente = new Cliente();
+        cliente.setCpf("0123");
+        cliente.setNome("Fulano");
+        cliente.setSexo(TipoSexo.M);
+
+        cadastro.adicionar(cliente);
+
+        Cliente clienteRepetido = new Cliente();
+        clienteRepetido.setCpf("0123");
+        clienteRepetido.setNome("Fulano");
+        clienteRepetido.setSexo(TipoSexo.M);
+
+        cadastro.adicionar(clienteRepetido);
+
+        System.out.print("Femininos:");
+        cadastro.imprimirClientes(TipoSexo.M);
+
+        System.out.println("Outros: ");
+        cadastro.imprimirClientes(TipoSexo.O);
+    }
+
+    private static void exemplosMaps() {
+
         //iniciando uma coleção Map,a key é inteiro e o valor é string
         Map<Integer, String> mapa = new HashMap<>();
 
@@ -38,9 +63,6 @@ public class Main {
         //Verificar se contem o valor informado
         boolean contemValor = mapa.containsValue("Fulano");
         System.out.println("Contem o valor Fulano? " + contemValor);
-
-
-
     }
 
     private static void repositorioComArrays(){
