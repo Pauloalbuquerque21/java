@@ -15,7 +15,7 @@ public class Controla_maps {
 
         if (clientes.containsKey(cliente.getCpf())) {
             System.out.println("Cpf já existe");
-    }else{
+        }else{
             clientes.put(cliente.getCpf(), cliente);
             System.out.println("Cliente adicionado");
         }
