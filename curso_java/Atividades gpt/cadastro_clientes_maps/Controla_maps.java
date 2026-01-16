@@ -11,19 +11,41 @@ public class Controla_maps {
         this.clientes = new HashMap<>();
     }
 
-    public void adicionarCliente(Cliente cliente){
+    public void adicionarCliente(Cliente cliente) {
 
         if (clientes.containsKey(cliente.getCpf())) {
             System.out.println("Cpf já existe");
-        }else{
+        } else {
             clientes.put(cliente.getCpf(), cliente);
             System.out.println("Cliente adicionado");
         }
     }
 
-    public String buscarPorCpf(String cpf){
-        String nomeCliente = clientes.get(cpf);
-        return nomeCliente;
+    public String buscarPorCpf(String cpf) {
+        Cliente cliente = clientes.get(cpf);
+
+        if (clientes != null) {
+            return cliente.getNome();
+        }
+        return null;
+
+    }
+
+    public void removerPorCpf(String cpf) {
+
+        if (clientes.containsKey(cpf)) {
+            clientes.remove(cpf);
+            Cliente cliente = clientes.get(cpf);
+            System.out.println("O usuário "+cliente.getNome()+" do cpf "+cpf+" ");
+        } else{
+            System.out.println("O Cpf "+cpf+" não se encontra na coleção");
+        }
+
+    }
+
+    public void listarClientes(){
+
+        for()
     }
 
 }
