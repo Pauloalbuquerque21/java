@@ -34,18 +34,19 @@ public class Controla_maps {
     public void removerPorCpf(String cpf) {
 
         if (clientes.containsKey(cpf)) {
-            clientes.remove(cpf);
             Cliente cliente = clientes.get(cpf);
             System.out.println("O usuário "+cliente.getNome()+" do cpf "+cpf+" ");
+            clientes.remove(cpf);
         } else{
             System.out.println("O Cpf "+cpf+" não se encontra na coleção");
         }
 
     }
 
+    /*
     public void listarClientes(){
 
         for()
     }
-
+    */
 }
