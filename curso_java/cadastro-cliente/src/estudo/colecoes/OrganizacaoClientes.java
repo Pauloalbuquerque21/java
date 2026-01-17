@@ -1,4 +1,4 @@
-package clientes.colecoes;
+package estudo.colecoes;
 
 import clientes.dominio.Cliente;
 import clientes.dominio.enums.TipoSexo;
