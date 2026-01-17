@@ -43,10 +43,12 @@ public class Controla_maps {
 
     }
 
-    /*
+
     public void listarClientes(){
 
-        for()
+        for (Map.Entry<String, Cliente> entry : clientes.entrySet()){
+            System.out.println(entry.getKey() + " -> " + (entry.getValue()).getNome());
+        }
     }
-    */
+
 }

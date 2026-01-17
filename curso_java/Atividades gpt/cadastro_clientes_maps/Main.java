@@ -16,6 +16,10 @@ public class Main {
         cadastro.removerPorCpf("12345678903");
         cadastro.removerPorCpf("12345678902");
 
+        System.out.println("Percorrendo o Map");
+
+        cadastro.listarClientes();
+
 
 
 
