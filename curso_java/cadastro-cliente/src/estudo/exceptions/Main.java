@@ -2,6 +2,7 @@ package estudo.exceptions;
 
 import clientes.dominio.Cliente;
 import clientes.dominio.enums.TipoSexo;
+import clientes.logicanegocio.ValidadoCliente;
 
 public class Main {
     public static void main(String[] args) {
@@ -13,6 +14,17 @@ public class Main {
             System.out.println("O tipo sexo estava null!");
         } catch (Exception e){
             System.out.println("Ocorreu um erro invexperado!");
+        }
+
+        Cliente cliente = new Cliente();
+        cliente.setCpf("01234567890");
+
+        try{
+            ValidadoCliente.validar(cliente);
+            System.out.println("CPF OK!");
+        }   catch (CpfInvalidoException e){
+            System.out.println(e.getMessage());
+
         }
 
     }
