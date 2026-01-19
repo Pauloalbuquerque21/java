@@ -2,6 +2,8 @@ package clientes.logicanegocio;
 
 import clientes.dominio.Cliente;
 import estudo.exceptions.CpfInvalidoException;
+import estudo.exceptions.DadoObrigatorioException;
+import estudo.exception
 
 public class ValidadoCliente {
     //O throws tem como objetivo criar regras, ou seja, quem chamar esse método validar,
@@ -13,5 +15,14 @@ public class ValidadoCliente {
             throw new CpfInvalidoException("Cpf Inválido!");
         }
 
+        validarDadosObrigarotios(cliente);
+
     }
+
+    private static void validarDadosObrigarotios(Cliente cliente){
+        if(cliente.getNome() == null) {
+            throw new DadoObrigatorioException("Campo nome é obrigatório");
+        }
+    }
+
 }
