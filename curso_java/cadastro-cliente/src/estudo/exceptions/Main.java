@@ -22,9 +22,14 @@ public class Main {
         try{
             ValidadoCliente.validar(cliente);
             System.out.println("CPF OK!");
-        }   catch (CpfInvalidoException e){
+        } catch (CpfInvalidoException e){
             System.out.println(e.getMessage());
 
+        } catch (RuntimeException e){
+            System.out.println(e.getMessage());
+        } finally {
+            //O finally sempre vai ser executado.
+            System.out.println("Fui executado no finally");
         }
 
     }

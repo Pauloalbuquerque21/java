@@ -1,5 +1,5 @@
 package estudo.exceptions;
-
+//Unchecked
 public class DadoObrigatorioException extends RuntimeException {
 
     public DadoObrigatorioException(String message) {
