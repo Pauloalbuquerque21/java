@@ -3,6 +3,8 @@ package estudo.exceptions;
 import clientes.dominio.Cliente;
 import clientes.dominio.enums.TipoSexo;
 import clientes.logicanegocio.ValidadoCliente;
+import java.util.Scanner;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -31,6 +33,25 @@ public class Main {
             //O finally sempre vai ser executado.
             System.out.println("Fui executado no finally");
         }
+
+        Scanner scanner = new Scanner(System.in);
+
+        try{
+            Cliente c = new Cliente();
+            String cpf = scanner.nextLine();
+            c.setCpf(cpf);
+
+            ValidadoCliente.validar(c);
+
+        } catch (CpfInvalidoException ex){
+            System.out.println("CPF Inválido");
+        } finally {
+            System.out.println("Fechando o scanner:");
+            scanner.close();
+            System.out.println("Scanner fechado");
+        }
+
+
 
     }
 }
