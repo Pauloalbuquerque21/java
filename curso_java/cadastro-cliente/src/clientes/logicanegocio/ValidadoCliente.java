@@ -19,8 +19,11 @@ public class ValidadoCliente {
     }
 
     private static void validarDadosObrigarotios(Cliente cliente){
-        if(cliente.getNome() == null) {
+        if(cliente.getNome() == null || cliente.getNome().isBlank()) {
             throw new DadoObrigatorioException("Campo nome é obrigatório");
+        }
+        if(cliente.getSexo() == null){
+            throw new DadoObrigatorioException("Campo sexo é obrigatório");
         }
     }
 

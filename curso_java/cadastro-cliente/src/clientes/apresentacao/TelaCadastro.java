@@ -9,6 +9,7 @@ import javax.swing.*;
 import clientes.logicanegocio.Cadastro;
 import clientes.logicanegocio.LogicaCadastroClienteFake;
 import clientes.logicanegocio.LogicaCadastroMemoria;
+import estudo.exceptions.CpfInvalidoException;
 
 public class TelaCadastro extends JFrame{
 
@@ -113,9 +114,17 @@ public class TelaCadastro extends JFrame{
                 cliente.setCpf(campoCpf.getText());
                 cliente.setSexo( (TipoSexo) campoSexo.getSelectedItem());
 
-                logicaCadastro.salvar(cliente);
+                try {
+                    logicaCadastro.salvar(cliente);
+                    logicaCadastro.imprimirRegistros();
+                } catch (CpfInvalidoException ex) {
+                    //JOptionPane é uma classe do Swing usada para criar janelas prontas de diálogo, como:
+                    //Mensagem de erro, Avisos, confirmações (Sim/Não) e Perguntas.
+                    JOptionPane.showMessageDialog(null,ex.getMessage());
+                } catch (Exception ex) {
+                    JOptionPane.showMessageDialog(null,ex.getMessage());
+                }
 
-                logicaCadastro.imprimirRegistros();
             }
         };
     }

@@ -4,6 +4,7 @@ import clientes.dominio.Cliente;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
+import estudo.exceptions.CpfInvalidoException;
 
 public class LogicaCadastroMemoria implements Cadastro<Cliente>{
 
@@ -14,7 +15,8 @@ public class LogicaCadastroMemoria implements Cadastro<Cliente>{
     }
 
     @Override
-    public void salvar(Cliente cliente) {
+    public void salvar(Cliente cliente) throws CpfInvalidoException {
+        ValidadoCliente.validar(cliente);
         this.lista.add(cliente);
     }
 
