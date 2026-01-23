@@ -14,7 +14,9 @@ public class PlataformaStreaming {
         conteudo.add(filme_serie);
     }
 
-    public void ShouwConteudoList(){
+
+
+    public void ShowConteudoList(){
         for (Conteudo n : conteudo){
             System.out.println(n);
         }

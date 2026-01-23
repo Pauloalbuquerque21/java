@@ -13,7 +13,7 @@ public class Conteudo {
         return titulo;
     }
 
-    public int getDuração(){
+    public int getDuracao(){
         return duracao;
     }
 

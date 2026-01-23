@@ -9,6 +9,10 @@ public class Filme extends Conteudo {
     }
     @Override
     public void reproduzir(){
-        System.out.println("Reproduzir filme: "+getTitulo()+" dirigido por "+diretor);
+        System.out.println("Reproduzir filme: "+getTitulo()+" dirigido por " + diretor);
+    }
+
+    public String toString() {
+        return "Titulo:" + getTitulo() + " Duração: " + getDuracao() + " Diretor: " + diretor;
     }
 }

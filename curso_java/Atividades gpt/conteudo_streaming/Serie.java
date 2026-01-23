@@ -14,7 +14,11 @@ public class Serie extends Conteudo{
 
     @Override
     public void reproduzir(){
-        System.out.println("Maratonando série: "+getTitulo()+" com "+Quant_temporada+" temporadas.");
+        System.out.println("Maratonando série: "+getTitulo()+" com " + Quant_temporada + " temporadas.");
+    }
+
+    public String toString() {
+        return "Titulo: " + getTitulo() + " Duração: " + getDuracao() + " Quantidade de temporadas: " + Quant_temporada;
     }
 
 }
