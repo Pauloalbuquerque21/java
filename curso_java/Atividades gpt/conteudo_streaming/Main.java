@@ -6,5 +6,10 @@ public class Main {
         Serie serie = new Serie("Naruto",1,10);
         filme.reproduzir();
         serie.reproduzir();
+
+        PlataformaStreaming armazenar = new PlataformaStreaming();
+
+        armazenar.AddConteudo(filme);
+        armazenar.AddConteudo(serie);
     }
 }
