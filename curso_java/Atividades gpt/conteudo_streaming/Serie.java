@@ -8,6 +8,13 @@ public class Serie extends Conteudo{
         this.Quant_temporada = Quant_temporada;
     }
 
-    public int getQuanti_temporada;
+    public int getQuanti_temporada(){
+        return Quant_temporada;
+    }
+
+    @Override
+    public void reproduzir(){
+        System.out.println("Maratonando série: "+getTitulo()+" com "+Quant_temporada+" temporadas.");
+    }
 
 }

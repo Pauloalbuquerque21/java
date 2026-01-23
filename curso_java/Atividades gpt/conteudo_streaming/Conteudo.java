@@ -17,4 +17,8 @@ public class Conteudo {
         return duracao;
     }
 
+    public void reproduzir(){
+        System.out.println("Reproduzir conteudo");
+    }
+
 }
