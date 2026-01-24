@@ -13,5 +13,14 @@ public class Main {
         armazenar.AddConteudo(serie);
 
         armazenar.ShowConteudoList();
+        try {
+            armazenar.buscarPorTitulo("Vorazes");
+            System.out.println("Conteúdo encontrado.");
+        } catch (ConteudoNaoEncontradoException ex){
+            System.out.println("Conteúdo não foi encontrado.");
+        }
+
+
+
     }
 }

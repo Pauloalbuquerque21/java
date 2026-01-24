@@ -23,6 +23,18 @@ public class PlataformaStreaming {
     }
 
 
+    public void buscarPorTitulo(String titulo) throws ConteudoNaoEncontradoException {
+        for (Conteudo m: conteudo){
+            if (titulo.equals(m.getTitulo())){
+                m.reproduzir();
+                break;
+            }else{
+                throw new ConteudoNaoEncontradoException("Conteudo não encontrado");
+            }
+        }
+
+    }
+
 
 
 
