@@ -4,9 +4,22 @@ public class Main {
     static String valor = "A lebre é branca";
 
     public static void main(String[] args) {
-        tamanhoString();
-        trabalhandoComSubstring();
-        pegarCaracteres();
+        replace();
+
+        String hello = "Hello";
+        //Esse é para ver se é parecido.
+        System.out.println("Parece com hello: " + hello.equalsIgnoreCase("hello"));
+        //Uso quando é igual.
+        System.out.println("Parece com hello: " + hello.equals("hello"));
+        //Ver se começa com He
+        System.out.println("Começa com He?: " + hello.startsWith("He"));
+        //Ver se termina com Lo
+        System.out.println("Começa com Lo?" + hello.endsWith("Lo"));
+
+        //Seperar pelo conteudo definido, no caso, o " ".
+        String nomeCompleto = "Fulano da silva sauro";
+        String[] partesDoNome = nomeCompleto.split(" ");
+
     }
 
     private static void tamanhoString(){
@@ -29,4 +42,61 @@ public class Main {
         System.out.println("Pedaço da string " + pedaco);
         System.out.println("Pedaço2 da string " + pedaco2);
     }
+
+    private static void exemploIndexOf(){
+        //Esse método indexOf é para encontra o objeto e informa a posição dele na string
+        int indice = valor.indexOf("R");
+        System.out.println("Indice letra a: " + indice);
+
+        String nome = "Pedro da silva";
+
+        //-1 -> valor não encontrado na string
+        indice = valor.indexOf("Silva");
+
+        System.out.println("Indice encontrado: " + indice);
+
+        if(nome.indexOf("Pedro") != -1){
+
+        } else {
+            System.out.println("Não encontrei esse pedaço no nome.");
+        }
+    }
+
+    private static void exemplosCase(){
+        String string = "Silva";
+
+        String caixaAlta = string.toUpperCase();
+
+        System.out.println("Caixa alta: "+ caixaAlta);
+
+        String caixaBaixa = string.toLowerCase();
+
+        System.out.println("Caixa baixa: " + caixaBaixa);
+    }
+
+    private static void removerespacosEmBranco(){
+
+        String string = "    Pedro da silva     ";
+
+        //apaga espaço antes e depois da string
+        String stringSemOsEspacos = string.trim();
+        System.out.println(stringSemOsEspacos.length());
+        System.out.println(stringSemOsEspacos);
+
+    }
+
+    private static void replace(){
+        String valor_replace = "Maçã";
+
+        String novaMaca = valor_replace.replace("ã","a").replace("ç","c");
+        System.out.println(novaMaca);
+
+        String cpf = "123.456.789-03";
+
+        String cpf2 = cpf.replace(".","").replace("-","");
+        System.out.println(cpf2);
+
+    }
+
+
 }
