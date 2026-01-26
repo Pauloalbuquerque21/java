@@ -19,7 +19,10 @@ public class Main {
         //Seperar pelo conteudo definido, no caso, o " ".
         String nomeCompleto = "Fulano da silva sauro";
         String[] partesDoNome = nomeCompleto.split(" ");
-
+        System.out.println(partesDoNome[0]);
+        System.out.println(partesDoNome[1]);
+        System.out.println(partesDoNome[2]);
+        System.out.println(partesDoNome[3]);
     }
 
     private static void tamanhoString(){
