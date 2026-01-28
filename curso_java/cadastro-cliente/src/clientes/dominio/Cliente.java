@@ -10,7 +10,17 @@ public class Cliente implements Comparable<Cliente> {
     private String nome;
     private String cpf;
     private TipoSexo sexo;
+    private Integer idade;
+    private Boolean ativo;
     private byte[] foto;
+
+    public Integer getIdade() {
+        return idade;
+    }
+
+    public void setIdade(Integer idade) {
+        this.idade = idade;
+    }
 
     public Cliente(){
         this.codigo = UUID.randomUUID();
@@ -83,7 +93,6 @@ public class Cliente implements Comparable<Cliente> {
         }
         return fator;
     }
-
 
 
 
