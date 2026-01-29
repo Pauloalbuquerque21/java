@@ -3,16 +3,32 @@ package estudo.files;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.BufferedReader;
 
 public class CriadorArquivo {
     public static void main(String[] args) {
        CriadorArquivo criadorArquivo = new CriadorArquivo();
-       criadorArquivo.lerArquivo();
+       criadorArquivo.deletarArquivo();
+    }
 
+    public void deletarArquivo(){
+        File arquivo = new File("C:\\Users\\paulo\\OneDrive\\Documentos\\pastaTest\\meu_arquivo.txt");
+        boolean deletou = arquivo.delete();
+        System.out.println("Deletou?" + deletou);
+    }
+
+    public void criarPasta(){
+        File file = new File("C:\\Users\\paulo\\OneDrive\\Documentos\\pastaTest\\pasta");
+
+        //Vai retorna um boolean. True se criou a pasta.Esse é uma método da class File, para criar pasta.
+        boolean criou = file.mkdir();
+        System.out.println("Pasta croiada? " + criou);
     }
 
     public void lerArquivo(){
-        File arquivo = new File("C:\\Users\\paulo\\OneDrive\\Documentos\\meu_arquivo.txt");
+        File arquivo = new File("C:\\Users\\paulo\\OneDrive\\Documentos\\pastaTest\\meu_arquivo.txt");
+        //Alguns métodos da class File
         System.out.println("Caminho: " + arquivo.getAbsolutePath());
         System.out.println("Nome: " + arquivo.getName());
         System.out.println("Caminho: " + arquivo.length());
@@ -20,10 +36,31 @@ public class CriadorArquivo {
 
      }
 
+     public void lerArquivoTexto(){
+        try{
+            File arquivo = new File("C:\\Users\\paulo\\OneDrive\\Documentos\\pastaTest\\meu_arquivo.txt");
+
+            FileReader fileReader = new FileReader(arquivo);
+            BufferedReader reader = new BufferedReader(fileReader);
+
+            String linha;
+
+            while ( (linha = reader.readLine()) != null ) {
+                System.out.println(linha);
+            }
+
+            reader.close();
+
+
+        } catch (IOException e) {
+            System.out.println("123456");
+        }
+     }
+
     public void criarArquivo(){
         try{
             //Usamos o "File para apontar onde o arquivo vai ser criado
-            File arquivo = new File("C:\\Users\\paulo\\OneDrive\\Documentos\\meu_arquivo.txt");
+            File arquivo = new File("C:\\Users\\paulo\\OneDrive\\Documentos\\pastaTest\\meu_arquivo.txt");
 
             //FileWriter abre uma coneção de escrita com o arquivo criado.
             FileWriter fileWriter = new FileWriter(arquivo);
