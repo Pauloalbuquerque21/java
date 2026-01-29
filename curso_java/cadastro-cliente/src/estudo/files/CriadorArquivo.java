@@ -1,16 +1,29 @@
 package estudo.files;
 
-//
 import java.io.File;
 import java.io.FileWriter;
 import java.io.BufferedWriter;
 
 public class CriadorArquivo {
     public static void main(String[] args) {
+       CriadorArquivo criadorArquivo = new CriadorArquivo();
+       criadorArquivo.lerArquivo();
 
+    }
+
+    public void lerArquivo(){
+        File arquivo = new File("C:\\Users\\paulo\\OneDrive\\Documentos\\meu_arquivo.txt");
+        System.out.println("Caminho: " + arquivo.getAbsolutePath());
+        System.out.println("Nome: " + arquivo.getName());
+        System.out.println("Caminho: " + arquivo.length());
+        System.out.println("Caminho: " + arquivo.isFile());
+
+     }
+
+    public void criarArquivo(){
         try{
             //Usamos o "File para apontar onde o arquivo vai ser criado
-            File arquivo = new File("C:\\Usuários\\paulo\\OneDrive\\Documentos");
+            File arquivo = new File("C:\\Users\\paulo\\OneDrive\\Documentos\\meu_arquivo.txt");
 
             //FileWriter abre uma coneção de escrita com o arquivo criado.
             FileWriter fileWriter = new FileWriter(arquivo);
@@ -37,8 +50,7 @@ public class CriadorArquivo {
         }catch(Exception e){
             System.out.println("Ocorreu um erro: " + e.getMessage());
         }
-
-
-
     }
+
+
 }
