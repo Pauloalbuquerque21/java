@@ -10,12 +10,15 @@ import clientes.logicanegocio.Cadastro;
 import clientes.logicanegocio.LogicaCadastroClienteFake;
 import clientes.logicanegocio.LogicaCadastroMemoria;
 import estudo.exceptions.CpfInvalidoException;
+import java.net.URL;
+import java.awt.*;
 
 public class TelaCadastro extends JFrame{
 
     private JLabel labelNome;
     private JLabel labelCpf;
     private JLabel labelSexo;
+    private JLabel labelFoto;
 
     private JTextField campoNome;
     private JTextField campoCpf;
@@ -102,6 +105,20 @@ public class TelaCadastro extends JFrame{
     }
 
     private void adicionarCamponentesFotos(){
+
+        URL localizacao = getClass().getResource("/clientes/apresentacao/rh.png");
+        ImageIcon imageIcon = new ImageIcon(localizacao);
+
+        Image imageRedimensionada = imageIcon.getImage().getScaledInstance(200,200, Image.SCALE_SMOOTH);
+
+        imageIcon = new ImageIcon(imageRedimensionada);
+
+        labelFoto = new JLabel();
+        labelFoto.setIcon(imageIcon);
+        labelFoto.setBounds(240,0,200,200);
+
+        getContentPane().add(labelFoto);
+
 
     }
 
