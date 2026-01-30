@@ -5,11 +5,12 @@ import java.io.FileWriter;
 import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.BufferedReader;
+import java.io.IOException;
 
 public class CriadorArquivo {
     public static void main(String[] args) {
        CriadorArquivo criadorArquivo = new CriadorArquivo();
-       criadorArquivo.deletarArquivo();
+       criadorArquivo.lerArquivoTexto();
     }
 
     public void deletarArquivo(){
