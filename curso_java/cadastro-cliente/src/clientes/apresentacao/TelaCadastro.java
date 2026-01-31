@@ -105,7 +105,10 @@ public class TelaCadastro extends JFrame{
     }
 
     private void adicionarCamponentesFotos(){
-
+        //Class-getClass() retorna a classe atual onde o código está rodando.
+        //Método-getResource(String path):procura por um arquivo.
+        //URL: Armazena o endereço interno onde imagem rh.png foi encontrada. Se o caminho estiver errado, essa variável será null.
+        //É uma impementa
         URL localizacao = getClass().getResource("/clientes/apresentacao/rh.png");
         ImageIcon imageIcon = new ImageIcon(localizacao);
 
