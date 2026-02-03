@@ -29,7 +29,7 @@ public class Escrita_arquivo {
 
             BufferedWriter writer = new BufferedWriter(fileWriter);
 
-            writer.write("Id: " + id + " - Produto: " + produto +  " - Preço unitario: " + preco_unitario + " - Quantidade: " +quantidade);
+            writer.write(id + "," + produto +  "," + preco_unitario + "," + quantidade);
 
             writer.flush();
             writer.close();
@@ -42,7 +42,7 @@ public class Escrita_arquivo {
     }
 
     public void lerArquivo(){
-        File arquivo = new File("C:\\Users\\paulo\\OneDrive\\Documentos\\pastaTest\\vendas_do_dia");
+        File arquivo = new File("C:\\Users\\paulo\\OneDrive\\Documentos\\pastaTest\\sistema\\vendas_do_dia.txt");
         try {
 
             FileReader fileReader = new FileReader(arquivo);
@@ -50,10 +50,13 @@ public class Escrita_arquivo {
             BufferedReader reader = new BufferedReader(fileReader);
 
             String linha;
-
+            String[] listaDeinformacao;
             while ( (linha = reader.readLine()) != null ){
-                System.out.println(linha);
+                listaDeinformacao = linha.split(",");
+                System.out.print(listaDeinformacao[2]);
             }
+
+
 
             reader.close();
 
