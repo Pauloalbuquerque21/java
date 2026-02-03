@@ -1,9 +1,6 @@
 package relatorio_financeiros;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.BufferedWriter;
-import java.io.IOException;
+import java.io.*;
 
 public class Escrita_arquivo {
 
@@ -43,6 +40,28 @@ public class Escrita_arquivo {
 
 
     }
+
+    public void lerArquivo(){
+        File arquivo = new File("C:\\Users\\paulo\\OneDrive\\Documentos\\pastaTest\\meu_arquivo.txt");
+        try {
+            FileReader fileReader = new FileReader(arquivo);
+
+            BufferedReader reader = new BufferedReader(fileReader);
+
+            String linha;
+
+            while ( (linha = reader.readLine()) != null ){
+                System.out.println(linha);
+            }
+
+            reader.close();
+
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+
 
 
 }

@@ -41,11 +41,29 @@ public class CriadorArquivo {
         try{
             File arquivo = new File("C:\\Users\\paulo\\OneDrive\\Documentos\\pastaTest\\meu_arquivo.txt");
 
+            /*
+            O que faz: Tenta abrir uma conexão real com o arquivo físico para leitura de caracteres.
+
+            Comportamento: Se o arquivo não existir exatamente nesse local,
+            o Java lançará uma FileNotFoundException (que cai no seu catch).
+             */
             FileReader fileReader = new FileReader(arquivo);
+
+            /*
+            O que faz: "Envelopa" o fileReader para criar um buffer (uma memória temporária).
+            Por que usar: Em vez de ler caractere por caractere do disco (o que é muito lento),
+            ele lê blocos inteiros e armazena na RAM, permitindo o uso do método readLine().
+            */
             BufferedReader reader = new BufferedReader(fileReader);
 
             String linha;
 
+            /*
+            String linha;: Declara uma variável para guardar temporariamente o texto de cada linha.
+            reader.readLine(): Lê o texto até encontrar uma quebra de linha (\n).
+            != null: O método retorna null apenas quando chega ao fim do arquivo.
+            while: O laço continua repetindo enquanto houver conteúdo para ler.
+            */
             while ( (linha = reader.readLine()) != null ) {
                 System.out.println(linha);
             }

@@ -6,5 +6,7 @@ public class Main {
         arquivo.criarPasta();
         arquivo.criarArquivo();
         arquivo.escreverNoArquivo(101,"Mouse Gamer",120.50,2);
+        arquivo.lerArquivo();
+
     }
 }
