@@ -42,8 +42,9 @@ public class Escrita_arquivo {
     }
 
     public void lerArquivo(){
-        File arquivo = new File("C:\\Users\\paulo\\OneDrive\\Documentos\\pastaTest\\meu_arquivo.txt");
+        File arquivo = new File("C:\\Users\\paulo\\OneDrive\\Documentos\\pastaTest\\vendas_do_dia");
         try {
+
             FileReader fileReader = new FileReader(arquivo);
 
             BufferedReader reader = new BufferedReader(fileReader);
