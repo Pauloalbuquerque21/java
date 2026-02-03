@@ -51,12 +51,16 @@ public class Escrita_arquivo {
 
             String linha;
             String[] listaDeinformacao;
+            double resultadoSoma = 0;
+
             while ( (linha = reader.readLine()) != null ){
+                System.out.print(linha);
                 listaDeinformacao = linha.split(",");
-                System.out.print(listaDeinformacao[2]);
+                double resultadoDouble = Double.parseDouble(listaDeinformacao[2]);
+                resultadoSoma = resultadoSoma + resultadoDouble;
             }
-
-
+            System.out.print("\n");
+            System.out.println(resultadoSoma);
 
             reader.close();
 
