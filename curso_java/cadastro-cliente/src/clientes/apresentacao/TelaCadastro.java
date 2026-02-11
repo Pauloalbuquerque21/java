@@ -25,6 +25,7 @@ public class TelaCadastro extends JFrame{
     private JComboBox<TipoSexo> campoSexo;
 
     private JButton botaoSalvar;
+    private JButton botaoEscolherFoto;
 
     private Cadastro<Cliente> logicaCadastro;
 
@@ -122,8 +123,34 @@ public class TelaCadastro extends JFrame{
 
         getContentPane().add(labelFoto);
 
+        botaoEscolherFoto = new JButton("Alterar Foto");
+        botaoEscolherFoto.setBounds(260,200,160,20);
+        botaoEscolherFoto.addActionListener(botaoEscolherFotoActionListener());
+
+        getContenPane().add(botaoEscolherFoto);
 
     }
+
+    private ActionListener botaoEscolherFotoActionListener(){
+        return new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFileChooser fileChosser = new JFileChooser();
+                //fileChooser.showOpenDialog(telaCadastro.this);
+
+                if(opcao == JFileChooser.APPROVE_OPTION){
+                    File arquivoSelectionado = fileChooser.getSerlectedFile();
+                    //System.out.println(arquivoSelectionado.getNome());
+                    String caminho = arquivoSelectionado.getAbsolutePath();
+
+                    ImagIcon imageIcon = new ImageIcon(caminho);
+                    labelFoto.setIcon(imageIcon);
+                }
+            };
+
+        }
+    }
+
 
     private ActionListener botaoSalvarActionListener(){
         return new ActionListener() {
