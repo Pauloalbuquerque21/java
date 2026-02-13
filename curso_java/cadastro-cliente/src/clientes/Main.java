@@ -1,7 +1,6 @@
 package clientes;
 
 import clientes.dominio.Cliente;
-import clientes.apresentacao.TelaCadastro;
 
 public class Main {
     public static void main(String[] args){

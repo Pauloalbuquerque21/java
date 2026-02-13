@@ -119,6 +119,7 @@ public class TelaCadastro extends JFrame{
          */
         ImageIcon imageIcon = new ImageIcon(localizacao);
 
+        //--------Redimensionamento---------
         /*
         getImage(): Extrai a imagem pura de dentro do ícone.
         getScaledInstance(200, 200, ...): Cria uma nova versão da imagem com exatamente 200x200 pixels.
@@ -126,18 +127,42 @@ public class TelaCadastro extends JFrame{
          */
         Image imageRedimensionada = imageIcon.getImage().getScaledInstance(200,200, Image.SCALE_SMOOTH);
 
+        /*
+         imageIcon = new ImageIcon(imageRedimensionada);:
+         O Java não consegue exibir o objeto Image direto no rótulo,
+         então precisamos "reembalar" a imagem redimensionada de volta
+         em um ImageIcon.
+        */
         imageIcon = new ImageIcon(imageRedimensionada);
 
+        //labelFoto = new JLabel();: Cria um componente de rótulo vazio.
         labelFoto = new JLabel();
+
+        //labelFoto.setIcon(imageIcon);: "Cola" a imagem redimensionada dentro desse rótulo
         labelFoto.setIcon(imageIcon);
+        //labelFoto.setBounds(240, 0, 200, 200);: Define a posição (240 pixels da esquerda, 0 do topo) e o tamanho do rótulo na janela.
         labelFoto.setBounds(240,0,200,200);
 
+        //getContentPane().add(labelFoto);: Adiciona o rótulo com a foto
+        // ao painel principal da sua janela para que ela apareça para o usuário.
         getContentPane().add(labelFoto);
 
+        //---------Criação do botão--------
+        //Cria um botão com o texto "Alterar Foto"
         botaoEscolherFoto = new JButton("Alterar Foto");
+
+        //Define a posição do botão (logo abaixo da foto) e
+        // suas dimensões (160 de largura por 20 de altura).
         botaoEscolherFoto.setBounds(260,200,160,20);
+
+        //Esta linha "atribui um ouvido" ao botão.
+        // Quando o usuário clicar, o método.
         botaoEscolherFoto.addActionListener(botaoEscolherFotoActionListener());
 
+        //será executado para realizar uma ação (provavelmente abrir um seletor de arquivos).
+        botaoEscolherFotoActionListener();
+
+        //Coloca o botão na janela.
         getContenPane().add(botaoEscolherFoto);
 
     }
@@ -148,6 +173,7 @@ public class TelaCadastro extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 JFileChooser fileChosser = new JFileChooser();
                 //fileChooser.showOpenDialog(telaCadastro.this);
+                int opcao = fileChooser.showOpenDialog(TelaCadastro.this);
 
                 if(opcao == JFileChooser.APPROVE_OPTION){
                     File arquivoSelectionado = fileChooser.getSerlectedFile();
