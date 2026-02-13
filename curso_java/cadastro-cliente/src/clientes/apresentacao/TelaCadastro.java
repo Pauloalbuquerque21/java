@@ -111,8 +111,19 @@ public class TelaCadastro extends JFrame{
         //URL: Armazena o endereço interno onde imagem rh.png foi encontrada. Se o caminho estiver errado, essa variável será null.
         //É uma impementa
         URL localizacao = getClass().getResource("/clientes/apresentacao/rh.png");
+
+        /*
+        Transforma a URL encontrada em um objeto ImageIcon,
+        que o Java entende como um componente
+        gráfico pronto para ser exibido
+         */
         ImageIcon imageIcon = new ImageIcon(localizacao);
 
+        /*
+        getImage(): Extrai a imagem pura de dentro do ícone.
+        getScaledInstance(200, 200, ...): Cria uma nova versão da imagem com exatamente 200x200 pixels.
+        Image.SCALE_SMOOTH: É um "filtro de qualidade" que garante que a imagem não fique serrilhada ou borrada ao ser redimensionada.
+         */
         Image imageRedimensionada = imageIcon.getImage().getScaledInstance(200,200, Image.SCALE_SMOOTH);
 
         imageIcon = new ImageIcon(imageRedimensionada);
