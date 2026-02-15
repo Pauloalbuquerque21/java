@@ -187,11 +187,15 @@ public class TelaCadastro extends JFrame{
                 //Verifica se o usuário realmente escolheu um arquivo e clicou no botão "Abrir" (ou "OK").
                 if(opcao == JFileChooser.APPROVE_OPTION){
                     //Pega o objeto
+                    //File que representa o arquivo que o usuário clicou.
                     File arquivoSelecionado = fileChooser.getSelectedFile();
 
+                    //Extrai o caminho completo (ex: C:\Fotos\foto.jpg) para que o Java saiba onde buscar a imagem no disco.
                     String caminho = arquivoSelecionado.getAbsolutePath();
 
+                    //Cria um novo ícone de imagem usando o caminho do arquivo selecionado.
                     ImageIcon imageIcon = new ImageIcon(caminho);
+                    //Atualiza o componente visual labelFoto na sua tela para exibir a nova imagem escolhida.
                     labelFoto.setIcon(imageIcon);
 
                 }
