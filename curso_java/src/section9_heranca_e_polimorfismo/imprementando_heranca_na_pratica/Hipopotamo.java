@@ -1,4 +1,4 @@
-package section9_heranca e polimorfismo;
+package section9_heranca_e_polimorfismo.imprementando_heranca_na_pratica;
 
 public class Hipopotamo {
     private int forcaMordida;

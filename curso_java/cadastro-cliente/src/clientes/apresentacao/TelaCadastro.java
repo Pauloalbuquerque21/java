@@ -12,6 +12,7 @@ import clientes.logicanegocio.LogicaCadastroMemoria;
 import estudo.exceptions.CpfInvalidoException;
 import java.net.URL;
 import java.awt.*;
+import java.io.File;
 
 public class TelaCadastro extends JFrame{
 
@@ -163,29 +164,40 @@ public class TelaCadastro extends JFrame{
         botaoEscolherFotoActionListener();
 
         //Coloca o botão na janela.
-        getContenPane().add(botaoEscolherFoto);
+        getContentPane().add(botaoEscolherFoto);
 
     }
-
+    //
     private ActionListener botaoEscolherFotoActionListener(){
+        //Aqui você está criando e retornando uma Classe Anônima.
+        //Em vez de criar um arquivo separado, você define o comportamento do clique do botão ali mesmo.
         return new ActionListener(){
             @Override
+            //Este é o método que o Java executa automaticamente no
+            // exato momento em que o usuário clica no botão "Alterar Foto".
             public void actionPerformed(ActionEvent e) {
-                JFileChooser fileChosser = new JFileChooser();
-                //fileChooser.showOpenDialog(telaCadastro.this);
+                //Cria o objeto que gerencia a janela de seleção de arquivos.
+                JFileChooser fileChooser = new JFileChooser();
+
+                //Abre a janela de diálogo na tela.
+                //TelaCadastro.this: Indica que a janela de arquivos é "filha" da sua tela de cadastro (ela fica centralizada em relação a ela).
+                //O resultado (se o usuário clicou em "Abrir" ou "Cancelar") é guardado na variável opcao.
                 int opcao = fileChooser.showOpenDialog(TelaCadastro.this);
 
+                //Verifica se o usuário realmente escolheu um arquivo e clicou no botão "Abrir" (ou "OK").
                 if(opcao == JFileChooser.APPROVE_OPTION){
-                    File arquivoSelectionado = fileChooser.getSerlectedFile();
-                    //System.out.println(arquivoSelectionado.getNome());
-                    String caminho = arquivoSelectionado.getAbsolutePath();
+                    //Pega o objeto
+                    File arquivoSelecionado = fileChooser.getSelectedFile();
 
-                    ImagIcon imageIcon = new ImageIcon(caminho);
+                    String caminho = arquivoSelecionado.getAbsolutePath();
+
+                    ImageIcon imageIcon = new ImageIcon(caminho);
                     labelFoto.setIcon(imageIcon);
-                }
-            };
 
-        }
+                }
+            }
+        //Esse ponto e virgula(;) é para o final do return.
+        };
     }
 
 
