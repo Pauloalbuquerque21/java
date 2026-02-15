@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 import estudo.exceptions.CpfInvalidoException;
+import clientes.utilitario.GerenciadorArquivo;
 
 public class LogicaCadastroMemoria implements Cadastro<Cliente>{
 
@@ -18,6 +19,7 @@ public class LogicaCadastroMemoria implements Cadastro<Cliente>{
     public void salvar(Cliente cliente) throws CpfInvalidoException {
         ValidadoCliente.validar(cliente);
         this.lista.add(cliente);
+        GerenciadorArquivo.persistirArquivo(cliente.getNome() + ".jpg",cliente.getFoto());
     }
 
     @Override
