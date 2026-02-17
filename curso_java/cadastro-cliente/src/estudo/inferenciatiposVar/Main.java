@@ -1,4 +1,4 @@
-package estudo.inferenciatipos;
+package estudo.inferenciatiposVar;
 
 import clientes.dominio.Cliente;
 import clientes.logicanegocio.LogicaCadastroClienteFake;
