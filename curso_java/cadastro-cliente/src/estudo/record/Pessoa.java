@@ -1,5 +1,6 @@
 package estudo.record;
 
+//POJO -> Plain Old Java Object
 public class Pessoa {
 
     private String nome;
@@ -18,5 +19,12 @@ public class Pessoa {
         this.nome = nome;
     }
 
+    public String getCpf(){
+        return cpf;
+    }
+
+    public void setCpf(){
+        this.cpf = cpf;
+    }
 
 }
