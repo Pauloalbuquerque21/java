@@ -4,6 +4,7 @@ import java.io.*;
 
 public class Escrita_arquivo {
 
+    //Método que é responsável para criar a pasta.
     public void criarPasta(){
         File file = new File("C:\\Users\\paulo\\OneDrive\\Documentos\\pastaTest\\sistema");
         boolean criou = file.mkdir();
