@@ -1,6 +1,7 @@
 package estudo.inferenciatipos;
 
 import clientes.dominio.Cliente;
+import clientes.logicanegocio.LogicaCadastroClienteFake;
 
 public class Main {
     public static void main(String[] args){
@@ -13,5 +14,7 @@ public class Main {
 
         //No lugar de declarar que a variavel é do tipo Cliente, só colocar var.
         var cliente = new Cliente();
+
+        var logica = new LogicaCadastroClienteFake();
     }
 }
