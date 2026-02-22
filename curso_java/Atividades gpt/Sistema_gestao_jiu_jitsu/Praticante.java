@@ -32,7 +32,5 @@ public class Professor extends Praticante{
 }
 
 public interface AptoCompeticao {
-
     void fazerAquecimento();
-
 }
