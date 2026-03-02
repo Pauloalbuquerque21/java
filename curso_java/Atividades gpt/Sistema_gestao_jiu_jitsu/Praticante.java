@@ -35,3 +35,11 @@ public class Professor extends Praticante{
 public interface AptoCompeticao {
     void fazerAquecimento();
 }
+
+//Tratamento de erro
+
+public static void validarIdade(int idade) throws Exception {
+    if (idade < 18){
+        throw new Exception("Idade inválida");
+    }
+}
