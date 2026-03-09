@@ -1,6 +1,6 @@
 package Sistema_gestao_jiu_jitsu;
 
-public abstract class Praticante {
+public abstract class Praticante{
     public String nome;
     public int idade;
     public String faixa;
@@ -9,20 +9,32 @@ public abstract class Praticante {
         System.out.print("Nome:"+nome+"\nIdade:"+idade+"Faixa:"+faixa);
     }
 
-}
-
-public class Aluno extends Praticante implements AptoCompeticao{
-    private String nomeProfessor;
-
-    @Override
-    public void exibirDetalhes(){
-        System.out.print("Nome: "+nome+"\nIdade: "+idade+"\nFaixa: "+faixa+"\nnomeProfessor: "+nomeProfessor);
+    //Get e Set do nome
+    public void getNome(String nome){
+        this.nome = nome;
+    }
+    public String setNome(){
+        return nome;
     }
 
-    public void fazerAquecimento(){
-        System.out.print("Aluno "+nome+" fazendo drills de aquecimento.");
+    //Get e Set da idade
+    public void getIdade(String idade){
+        this.idade = idade;
+    }
+    public int setIdade(){
+        return idade;
+    }
+
+    //Get e Set da Faixa
+    public void getFaixa(String faixa){
+        this.faixa = faixa;
+    }
+    public String setFaixa(){
+        return faixa;
     }
 }
+
+
 
 public class Professor extends Praticante{
     private String grouNaFaixaPreta;
