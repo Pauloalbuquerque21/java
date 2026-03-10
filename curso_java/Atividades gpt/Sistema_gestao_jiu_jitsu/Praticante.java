@@ -18,7 +18,7 @@ public abstract class Praticante{
     }
 
     //Get e Set da idade
-    public void getIdade(String idade){
+    public void getIdade(int idade){
         this.idade = idade;
     }
     public int setIdade(){
@@ -31,27 +31,5 @@ public abstract class Praticante{
     }
     public String setFaixa(){
         return faixa;
-    }
-}
-
-
-
-public class Professor extends Praticante{
-    private String grouNaFaixaPreta;
-    @Override
-    public void exibirDetalhes(){
-        System.out.print("Nome: "+nome+"\nIdade: "+idade+"\nFaixa: "+faixa+"\nGrau da Faixa:"+grouNaFaixaPreta);
-    }
-}
-
-public interface AptoCompeticao {
-    void fazerAquecimento();
-}
-
-//Tratamento de erro
-
-public static void validarIdade(int idade) throws Exception {
-    if (idade < 18){
-        throw new Exception("Idade inválida");
     }
 }
