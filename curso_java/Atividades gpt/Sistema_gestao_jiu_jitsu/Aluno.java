@@ -13,7 +13,7 @@ public class Aluno extends Praticante implements AptoCompeticao{
 
     @Override
     public void exibirDetalhes(){
-        System.out.print("Nome: "+setNome()+"\nIdade: "+setIdade()+"\nFaixa: "+setFaixa()+"\nnomeProfessor: "+setNomeProfessor());
+        System.out.print("Nome: "+setNome()+"\nIdade: "+setIdade()+"\nFaixa: "+setFaixa()+"\nNome Professor: "+setNomeProfessor());
     }
 
     public void fazerAquecimento(){
