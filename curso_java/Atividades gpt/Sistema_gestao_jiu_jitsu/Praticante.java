@@ -18,7 +18,11 @@ public abstract class Praticante{
     }
 
     //Get e Set da idade
-    public void getIdade(int idade){
+    public void getIdade(int idade) throws IdadeInvalidaException {
+        if( idade < 18 || idade >18){
+            //O 'throw' (sem o s)  é o que efetivamente dispara o erro
+            throw new IdadeInvalidaException("Idade Inválida para praticar Jiu-jitsu");
+        }
         this.idade = idade;
     }
     public int setIdade(){
@@ -31,5 +35,11 @@ public abstract class Praticante{
     }
     public String setFaixa(){
         return faixa;
+    }
+
+    public static void Idadeinvalida(int idade) throws Exception {
+        if (idade < 18){
+            throw new Exception("idade inválida");
+        }
     }
 }
