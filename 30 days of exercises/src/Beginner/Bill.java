@@ -21,6 +21,7 @@ public class Bill {
                 System.out.println(1);
             }
 
+
         }
 
     }
