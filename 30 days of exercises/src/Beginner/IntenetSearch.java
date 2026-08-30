@@ -11,5 +11,7 @@ public class IntenetSearch {
         int linkOne = (linkThree*2)*2;
         System.out.println(linkOne);
 
+        scanner.close();
+
     }
 }
