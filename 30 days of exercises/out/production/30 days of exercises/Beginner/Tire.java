@@ -13,6 +13,9 @@ public class Tire {
             int resultValor = Math.abs(valorTwe - valorOne);
             System.out.println(resultValor);
         }
+
+        scanner.close();
     }
+
 
 }
