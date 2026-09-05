@@ -5,10 +5,14 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
-        int definitionValuerUser = scanner.nextInt();
-        int[] ourArrayWithOneandTwes = new int[definitionValuerUser];
+        String definitionValuerUser = scanner.next();
+        if (definitionValuerUser == null){
+            return;
+        }
+        int definitionValuerUserTwe = Integer.parseInt(definitionValuerUser);
+        int[] ourArrayWithOneandTwes = new int[definitionValuerUserTwe];
 
-        for (int i = 0; i < definitionValuerUser; i++) {
+        for (int i = 0; i < definitionValuerUserTwe; i++) {
             ourArrayWithOneandTwes[i] = scanner.nextInt();
         }
         int times = 0;
@@ -19,7 +23,7 @@ public class Main {
                 times = times + 1;
             }
         }
-        System.out.print(times);
+        System.out.println(times);
         scanner.close();
     }
 
